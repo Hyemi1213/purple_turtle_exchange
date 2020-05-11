@@ -1,0 +1,17 @@
+@import 'utils';
+
+.wrapper {
+    border-bottom: 1px solid $greyDark;
+    margin-top: 1rem;
+    .search-input {
+        height: 100%;
+        border: none;
+        @include media(">large") {
+            font-size: 1.5rem;
+        }
+    }
+    .search-icon-box {
+        @include flexMC;
+        cursor: pointer;
+    }
+}

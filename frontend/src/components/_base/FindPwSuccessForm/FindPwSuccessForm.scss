@@ -1,0 +1,40 @@
+@import 'utils';
+
+.wrapper {
+    margin-top: 2rem;
+
+    .btn-box {
+        margin: 4.9rem auto 3.2rem;
+        text-align: center;
+    }
+
+    .link-box {
+        margin-top: 2rem;
+        text-align: center;
+
+        a {
+            font-size: 1.4rem !important;
+        }
+    }
+
+    @include media('>medium') {
+        margin-top: 3.4rem;
+
+        .btn-box {
+            margin: 3.2rem auto 9rem;
+        }
+
+        .info-box {
+            text-align: center;
+
+            .info {
+                text-align: left;
+                display: inline-block;
+            }
+        }
+
+        .link-box {
+            margin-top: 2.7rem;
+        }
+    }
+}

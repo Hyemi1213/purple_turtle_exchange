@@ -1,0 +1,53 @@
+@import 'utils';
+
+.wrapper {
+    background: $greyLightest;
+    border-radius: 4px;
+    padding: 1.5rem;
+    padding-left: 2rem;
+
+    &.no-bg {
+        background: transparent;
+        padding: 0;
+
+        .content {
+            text-transform: none;
+        }
+    }
+
+    .title {
+        @include font($danger, 1.2rem, $bold);
+        line-height: 1.9rem;
+        letter-spacing: -0.5px;
+        margin-left: -0.9rem;
+    }
+
+    .content {
+        @include font($greyDark, 1.2rem, $medium);
+        line-height: 1.9rem;
+        letter-spacing: -0.5px;
+        position: relative;
+        margin-bottom: 1.9rem;
+        text-transform: uppercase;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        &:before {
+            content: '·';
+            position: absolute;
+            left: -1rem;
+        }
+
+        &.no-margin {
+            margin-bottom: 0;
+        }
+
+        &.no-margin-pc {
+            @include media('>medium') {
+                margin-bottom: 0;
+            }
+        }
+    }
+}

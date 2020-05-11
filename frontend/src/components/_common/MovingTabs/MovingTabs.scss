@@ -1,0 +1,41 @@
+@import 'utils';
+
+.wrapper {
+    background: $white;
+    border-radius: 6px;
+    box-shadow: 2px 4px 9px rgba(18, 18, 35, 0.12);
+    padding: 0.6rem 0.8rem;
+    @include flexMC;
+
+    .menu {
+        cursor: pointer;
+        @include font($greyDarker, 1.2rem, $medium);
+        line-height: 1.9rem;
+        letter-spacing: -0.5px;
+        background-color: $greyLightest;
+        border-radius: 13px;
+        padding: 0.3rem 0.9rem;
+        min-width: 8.6rem;
+        width: 100%;
+        margin-right: 0.7rem;
+        text-align: center;
+        transition: background-color 0.3s;
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        &.active {
+            color: $white;
+            font-weight: $bold;
+            background-color: $greyDark;
+        }
+    }
+
+    @include media('>medium') {
+        padding: 0;
+        background: none;
+        box-shadow: none;
+
+    }
+}

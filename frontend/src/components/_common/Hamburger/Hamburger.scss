@@ -1,0 +1,101 @@
+@import 'utils';
+
+//햄버거 2개
+// .hamburger-wrapper {
+//  	height: $headerMobile;
+//   	cursor: pointer;
+//   	z-index: z-index-for('hamburger');
+//   	position: absolute;
+//   	right: 0;
+//   	top: 0;
+//   	transition: all .3s ease-in;
+// 	padding:1.2rem 1.4rem 1.2rem 1.5rem;
+
+//   	.hamburger {
+//   		width: 1.8rem;
+//   		height: 100%;
+// 		position: relative;
+// 		display: flex;
+// 		flex-direction: column;
+// 		justify-content: space-around;
+// 		align-items: center;
+//   		span {
+// 			background: $greyBlack;
+// 			display: block;
+// 	  		height: .2rem;
+// 	  		width:100%;
+// 	  		cursor: pointer;
+// 	  		transition: all .3s ease-in;
+// 		}
+//   	}
+//   	&.is-active {
+//   		background: transparent;
+//   		.hamburger {
+//   			span {
+// 				&:first-child {
+// 					transform: translateY(.4rem) translateX(0) rotate(45deg);
+// 				}
+// 				&:last-child {
+// 					transform: translateY(-.5rem) translateX(0) rotate(-45deg);
+// 				}
+// 			}
+//   		}
+
+// 	}
+// }
+
+//햄버거 3개
+.hamburger-wrapper {
+ 	height: $headerMobile;
+  	cursor: pointer;
+  	z-index: 51;
+  	position: absolute;
+  	left: 0;
+  	top: 0;
+  	transition: all .3s ease-in;
+	padding:1.8rem 1.5rem;
+	  
+	&.right {
+		left: unset;
+		right: 0;
+	}
+
+  	.hamburger {
+  		width: 2rem;
+  		height: 100%;
+  		position: relative;
+  		span {
+	  		background: $greyDark;
+	  		height: .2rem;
+	  		width:100%;
+	  		position: absolute;
+	  		top: 0;
+	  		left: 0;
+	  		cursor: pointer;
+	  		transition: all .3s ease-in;
+	  		&:nth-child(2) {
+	  			top: .5rem;
+	  		}
+	  		&:last-child {
+	  			top: 1rem;
+	  		}
+		}
+  	}
+  	&.is-active {
+  		background: transparent;
+  		.hamburger {
+  			span {
+				&:first-child {
+					transform: translateY(.5rem) translateX(0) rotate(45deg);
+				}
+				&:nth-child(2){
+					opacity: 0;
+				}
+				&:last-child {
+					transform: translateY(-.5rem) translateX(0) rotate(-45deg);
+				}
+			}
+  		}
+
+	}
+}

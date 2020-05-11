@@ -1,0 +1,204 @@
+@import 'utils';
+
+.custom-modal {
+    line-height: 2rem;
+    letter-spacing: -0.2px;
+    padding: 1.2rem 1.2rem 1.8rem;
+    border: none;
+    border-radius: 0.4rem;
+    .custom-header {
+        padding: 0;
+        padding-bottom: 1rem;
+        position: relative;
+        border-color: $greyLighter;
+
+        .title {
+            @include font($greyDarker, 1.8rem, $bold);
+            line-height: 2.3rem;
+            letter-spacing: -0.4px;
+        }
+
+        .title-info {
+            @include font($greyDark, 1.2rem, $medium);
+            line-height: 1.9rem;
+            letter-spacing: -0.5px;
+        }
+
+        &:after {
+            content: '';
+            height: 0.3rem;
+            width: 7.7rem;
+            background: $greyLight;
+            position: absolute;
+            bottom: -0.1rem;
+            left: 0;
+        }
+    }
+    .custom-body {
+        @include font($greyDarkest, 1.4rem, $regular);
+        padding: 0;
+
+        .content-box {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid $greyLighter;
+            padding: 0.6rem 0;
+
+            &:nth-last-of-type(2) {
+                border-bottom: 1px solid $greyDark;
+            }
+
+            &:last-of-type {
+                border: none;
+            }
+
+            .title {
+                @include font($greyDark, 1.2rem, $bold);
+                line-height: 1.9rem;
+                letter-spacing: -0.5px;
+            }
+
+            .content {
+                font-family: 'Montserrat', sans-serif;
+                @include font($greyDark, 1.3rem, $medium);
+                line-height: 1.8rem;
+                letter-spacing: -0.3px;
+                text-transform: uppercase;
+            }
+
+            &.content-block-box {
+                display: block;
+                .content {
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+    .custom-footer {
+        padding: 1.8rem 0 0.6rem;
+        border: none;
+
+        &.center {
+            display: flex;
+            justify-content: center;
+        }
+
+        & > :not(:last-child) {
+            margin-right: 0.7rem;
+        }
+
+        & > :not(:first-child) {
+            margin-left: 0.7rem;
+        }
+
+        .submit-btn {
+            background: $greyDarker;
+        }
+
+        .custom-btn {
+            min-width: 6.7rem;
+            font-size: 1.2rem;
+            line-height: 1.9rem;
+            letter-spacing: -0.5px;
+        }
+    }
+
+    &.colour1 {
+        .custom-header {
+            border-color: $danger;
+
+            &:after {
+                background: $danger;
+            }
+        }
+
+        .content-box {
+            border-bottom: 1px solid $dangerLighter;
+
+            &:nth-last-of-type(2) {
+                border-bottom: 1px solid $danger;
+            }
+        }
+
+        .custom-footer {
+
+            .submit-btn {
+                background: $danger;
+            }
+        }
+    }
+
+    &.colour2 {
+        .custom-header {
+            border-color: $success;
+
+            &:after {
+                background: $success;
+            }
+        }
+
+        .content-box {
+            border-bottom: 1px solid $successLighter;
+
+            &:nth-last-of-type(2) {
+                border-bottom: 1px solid $success;
+            }
+        }
+
+        .custom-footer {
+
+            .submit-btn {
+                background: $success;
+            }
+        }
+    }
+
+    &.colour3 {
+        .custom-header {
+            border-color: $info;
+
+            &:after {
+                background: $info;
+            }
+        }
+
+        .content-box {
+            border-bottom: 1px solid $infoLighter;
+
+            &:nth-last-of-type(2) {
+                border-bottom: 1px solid $info;
+            }
+        }
+
+        .custom-footer {
+
+            .submit-btn {
+                background: $info;
+            }
+        }
+    }
+
+    @include media('>medium') {
+        .custom-header {
+
+            .title {
+                font-size: 1.4rem;
+            }
+
+            &:after {
+                width: 7.2rem;
+            }
+        }
+        .custom-footer {
+
+            & > :not(:last-child) {
+                margin-right: 1rem;
+            }
+
+            & > :not(:first-child) {
+                margin-left: 1rem;
+            }
+        }
+    }
+}

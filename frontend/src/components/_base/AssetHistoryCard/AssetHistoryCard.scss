@@ -1,0 +1,102 @@
+@import 'utils';
+
+.common-text-style1 {
+    line-height: 1.8rem;
+    letter-spacing: -0.3px;
+}
+
+.common-text-style2 {
+    line-height: 1.9rem;
+    letter-spacing: -0.5px;
+}
+
+.wrapper {
+    margin-top: 0.8rem;
+
+    &:first-child {
+        margin-top: 0;
+    }
+
+    .main-title {
+        @include font($success, 1.2rem, $bold);
+        @extend .common-text-style2;
+        display: flex;
+        align-items: center;
+
+        .icon {
+            background: $success;
+            width: 1.2rem;
+            height: 1.2rem;
+            border-radius: 100px;
+            @include flexMC;
+            margin-right: 0.6rem;
+
+            &:after {
+                content: '';
+                background-image: url(/src/static/images/plus_icon.svg);
+                background-repeat: no-repeat;
+                width: 100%;
+                height: 100%;
+                background-position: center;
+            }
+        }
+    }
+
+    .date { 
+        text-align: right;
+        font-family: 'Montserrat', sans-serif;
+        @include font($greyDark, 1rem, $medium);
+        @extend .common-text-style1;
+    }
+
+    .amount {
+        text-align: right;
+        font-family: 'Montserrat', sans-serif;
+        @extend .common-text-style1;
+        @include font($greyDarker, 1.3rem, $medium);
+        text-transform: uppercase;
+        border-bottom: 1px solid $greyLight;
+        padding: 1rem 0 0.9rem;
+        margin-bottom: 0.6rem;
+    }
+
+    .txid-frame {
+        margin-bottom: 0.4rem;
+    }
+
+    .title, .content {
+        @extend .common-text-style2;
+        @include font($greyDark, 1.2rem, $bold);
+    }
+
+    .content {
+        font-weight: $medium;
+
+        &.txid {
+            font-family: 'Montserrat', sans-serif;
+            word-break: break-all;
+        }
+
+        &.pending {
+            color: $warning;
+        }
+
+        .spinner {
+            margin-right: 0.5rem;
+        }
+    }
+
+    &.withdrawl {
+        .main-title {
+            color: $danger;
+
+            .icon {
+                background: $danger;
+
+                &:after {
+                    background-image:url(/src/static/images/minus_icon.svg); 
+                }
+            }
+        }
+    }
+}

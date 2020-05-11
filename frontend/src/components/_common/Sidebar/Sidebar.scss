@@ -1,0 +1,24 @@
+@import 'utils';
+
+.wrapper {
+    position: fixed;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    transition: left .3s ease;
+
+    &.sticky {
+        top: 0;
+        left: 0;
+        align-items: flex-start;
+    }
+
+    &.resize {
+        top: 0;
+        left: -100%;
+
+        &.active {
+            left: 0;
+        }
+    }
+}

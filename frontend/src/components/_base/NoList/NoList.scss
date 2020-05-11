@@ -1,0 +1,12 @@
+@import 'utils';
+
+.wrapper {
+    @include flexMC;
+    flex-direction: column;
+    .text {
+        margin-top: 3.7rem;
+        @include font($greyDarker, 1.4rem, $bold);
+        line-height: 2.3rem;
+        letter-spacing: -0.4px;
+    }
+}

@@ -1,0 +1,116 @@
+@import 'utils';
+
+.default-input {
+    background: $white;
+    border: none;
+    border-radius: 4px;
+    border: 1px solid $greyLight;
+    height: $commonHeightMobile;
+    @include font($greyDarker, 1.2rem, $medium);
+    padding: 0.8rem 0.9rem;
+    line-height: $commonHeightMobile; 
+    letter-spacing: -0.3px;
+
+    @include media(">large") {
+        height: $commonHeightPC;
+        line-height: 1.6rem; //$commonHeightMobile/2
+        font-size: 1.4rem;
+    }
+
+    &::placeholder {
+        color: $greyDark;
+    }
+
+    &[readonly] {
+        background: inherit;
+    }
+
+    &:focus, &.focused {
+        border-color: $primary;
+        box-shadow: none !important;
+        color: $greyDarker;
+        font-weight: $medium;
+        outline: none;
+    }
+
+    &.invalid {
+        border-color: $danger !important;
+        background: url(components/_common/Input/error_icon.svg) no-repeat;
+        background-position: 96% 50%; 
+        padding-right: 3.5rem;
+
+        &.is-extra-box {
+            background: none;
+        }
+    }
+
+    &.valid {
+        color: $greyDarker;
+        border-color: $greyDarker;
+        background-image: none;
+
+        &:focus {
+            border-color: $primary;
+        }
+    }
+
+    &.disabled {
+        border-color: $greyLighter;
+        background: $greyLightest;
+        color: $greyLight;
+    }
+
+    &.big-box {
+        border: 1px solid $greyLighter;
+        height: 4rem;
+        line-height: 4rem;
+        padding: 1rem;
+    }
+
+}
+
+.box-for-extra-text {
+    position: relative;
+    width: 100%;
+
+    input {
+        padding-right: 4.3rem;
+    }
+
+    &.normal-padding-pc {
+        input {
+            padding-right: 0.9rem;
+        }
+
+        .extra-box {
+            display: none;
+        }
+    }
+}
+
+.extra-box {
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    // @include vertical-align;
+    @include flexMC;
+    position: absolute;
+    right: 0;
+    top: 0;
+    min-width: 4rem;
+    height: $commonHeightMobile;
+    line-height: $commonHeightMobile;
+    text-align: center;
+    @include font($primary, 1.2rem, $medium);
+    letter-spacing: -0.5px;
+
+    @include media(">large") {
+        height: $commonHeightPC;
+        line-height: $commonHeightPC;
+        font-size: 1.4rem;
+    }
+
+    &.bg {
+        background: $primaryLighter;
+        border: 1px solid $primary;
+    }
+}

@@ -1,0 +1,104 @@
+@import 'utils';
+
+.common-text-style {
+    line-height: 1.8rem;
+    letter-spacing: -0.3px;
+}
+
+.total-wrapper {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    z-index: $ZheaderBelow;
+
+    &.open {
+        // height: 100%;
+    }
+}
+
+.menu-wrapper {
+    background: $white;
+    border-bottom: 2px solid $greyLighter;
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    padding: 1rem 0;
+    position: relative;
+
+    p, span {
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    .pair {
+        @include font($greyDark, 1rem, $medium);
+        text-transform: uppercase;
+        margin: 0 1.6rem 0 0.6rem;
+        @extend .common-text-style;
+
+        .base-currency {
+            @include font($greyDarkest, 1.3rem, $bold);
+        }
+    }
+
+    .price {
+        @include font($greyDarker, 1.3rem, $bold);
+        @extend .common-text-style;
+        margin-right: 0.6rem;
+    }
+
+    .percentage {
+        @include font($success, 1rem, $medium);
+        @extend .common-text-style;
+        display: flex;
+        align-items: center;
+
+        .sort-arrow {
+            path {
+                fill: $success;
+            }
+        }
+        &.danger {
+            color: $danger;
+            .sort-arrow {
+                path {
+                    fill: $danger;
+                }
+            }
+        }
+    }
+
+    .arrow {
+        // @include vertical-align;
+        border-color: $greyLight;
+        border-width: 0 1px 1px 0;
+        position: absolute;
+        top: 1.4rem;
+        right: 0;
+    }
+}
+
+.cryptolist {
+    background: $white;
+    padding-top: 1.2rem;
+    height: 100vh;
+    position: relative;
+    z-index: -1;
+}
+
+//react-transition-group
+:global .cryptolist-enter {
+    margin-top: -1000%;
+}
+:global .cryptolist-enter-active {
+    margin-top: 0;
+    transition: margin 300ms;
+}
+:global .cryptolist-exit {
+    margin-top: 0;
+}
+:global .cryptolist-exit-active {
+    margin-top: -1000%;
+    transition: margin 800ms;
+}

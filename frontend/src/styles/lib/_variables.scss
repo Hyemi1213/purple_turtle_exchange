@@ -1,0 +1,66 @@
+$breakpoints: (
+  //xs
+  small: 576px,
+  //sm
+  medium: 992px,
+  //md
+  large: 992px,
+  //lg
+  huge: 1200px
+);
+
+//z-index
+$Zheader : 50;
+$ZheaderBelow: 49;
+$Zfooter : 50;
+
+//color
+$primary: #C569FE;
+$primaryDark: #9714E7;
+$primaryLight: #E9C4FF;
+$primaryLighter: #F3E9F9;
+$info: #467AFF;
+$infoDark: #1F399F;
+$infoLight: #A2B4FF;
+$infoLighter: #E1E7FF;
+$success: #13CE66;
+$successDark: #067939;
+$successLight: #8DE7B5;
+$successLighter: #CDF4DE;
+
+$danger: #FF6060;
+$dangerDark: #EB2B2B;
+$dangerLight: #FFB3B3;
+$dangerLighter: #FFDDDD;
+
+$warning: #F6C53A;
+$warningDark: #E2A700;
+$warningLight: #FBE2A0;
+$warningLighter: #FDF2D5;
+
+$greyLight: #B0B7C0;
+$greyLighter: #D9DCE1;
+$greyLightest: #EEEEEE;
+$greyDark: #7C7F88;
+$greyDarker: #545662;
+$greyDarkest: #333442;
+$greyBlack : #121223;
+$white : #FFFFFF;
+$black: #000;
+
+
+$regular: 400;
+$thin: $regular - 200;
+$light: $regular - 100;
+$medium: $regular + 100;
+$bold: $regular + 300;
+$fblack: $regular + 400;
+$extra: $regular + 500;
+
+$headerPc: 5.8rem;
+$headerMobile: 4.6rem;
+$headerMobileExpanded: 9.4rem;
+
+//input 높이랑 line-height 고정값
+$commonHeightMobile: 3.4rem;
+$commonHeightPC: 3.8rem;

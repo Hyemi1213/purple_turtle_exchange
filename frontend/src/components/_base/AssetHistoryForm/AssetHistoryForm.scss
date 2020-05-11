@@ -1,0 +1,36 @@
+@import 'utils';
+
+.wrapper {
+    @include media('>medium'){
+        padding: 0 1.4rem;
+
+        &.no-padding {
+            padding: 0;
+        }
+    }
+}
+
+.moving-tabs {
+    margin: 1.8rem 0 0.8rem;
+
+    @include media('>medium') {
+        margin: 1.8rem 0;
+    }
+}
+
+.scroll-box {
+
+    @include media('>medium') {
+        height: 60rem;
+    }
+}
+
+.card { 
+    &:last-of-type {
+        margin-bottom: 7.5rem;
+
+        @include media('>medium') {
+            margin-bottom: 1rem;
+        }
+    }
+}

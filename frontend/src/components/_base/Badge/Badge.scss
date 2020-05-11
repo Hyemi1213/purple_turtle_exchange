@@ -1,0 +1,19 @@
+@import 'utils';
+
+.wrapper {
+    background: $greyLightest;
+    border-radius: 16px;
+    display: inline-block;
+    @include font($greyDark, 1.2rem, $bold);
+    line-height: 1.9rem;
+    letter-spacing: -0.5px;
+    min-width: 8.3rem;
+    padding: 0.5rem 0;
+    text-align: center;
+
+    &.active {
+        background: $infoLighter;
+        color: $info;
+        min-width: 5.8rem;
+    }
+}

@@ -1,0 +1,76 @@
+@import 'utils';
+
+.wrapper {
+    .main-box {
+        position: relative;
+        text-align: center;
+        .content {
+            @include center-align;
+            @include flexMC;
+
+            .title {
+                @include font($greyDarker, 1.4rem, $bold);
+                line-height: 2.3rem;
+                letter-spacing: -0.4px;
+                margin-left: 0.9rem;
+            }
+        }
+    }
+
+    .form-box {
+        margin-bottom: 1.6rem;
+
+        .title {
+            @include font($greyDarker, 1.2rem, $bold);
+            line-height: 1.9rem;
+            letter-spacing: -0.5px;
+            margin-bottom: 1rem;
+        }
+
+        .form {
+            background: $white;
+            border-radius: 6px;
+            border: 1px solid $greyLighter;
+            padding: 0 1.2rem;
+
+            .list {
+                padding: 0.6rem 0;
+                border-bottom: 1px solid $greyLighter;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                &:last-of-type {
+                    border-bottom: none;
+                }
+
+                p {
+                    line-height: 1.9rem;
+                    letter-spacing: -0.5px;
+                    @include font($greyDark, 1.2rem, $medium);
+                    text-transform: uppercase;
+
+                    &.content1 {
+                        font-weight: $bold;
+                    }
+                }
+            }
+
+            .info-box {
+                @include font($info, 1rem, $medium);
+                line-height: 1.4rem;
+                letter-spacing: -0.5px;
+                margin: 0.9rem 0 1.2rem;
+            }
+        }
+    }
+
+    .btn-box {
+        text-align: center;
+        margin-top: 3.2rem;
+
+        a {
+	        padding: 0.8rem 2.3rem;
+        }
+    }
+}

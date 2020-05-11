@@ -1,0 +1,8 @@
+@import 'utils';
+
+.wrapper {
+
+    @include media('>medium') {
+        margin-top: 9.8rem;
+    }
+}

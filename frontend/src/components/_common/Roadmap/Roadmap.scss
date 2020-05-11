@@ -1,0 +1,118 @@
+@import 'utils';
+
+.roadmap {
+	position: relative;
+	.total-line {
+		position: absolute;
+		height: calc(100% - 10.8rem);
+		width:2px;
+		background: $greyDarkest;
+		left:50%;
+		top: 50%;
+		transform:translateY(-50%);
+	}
+	.box {
+		width:2px;
+		position: relative;
+		margin:0 auto;
+		margin-bottom:	5rem;
+
+		&:last-child {
+			margin-bottom: 	0;
+		}
+
+		&:before {
+			content:'';
+			// background: url('static/images/semi_title.png') no-repeat center;
+            // background-size:contain;
+            background: $greyDarkest;
+            width: 1rem;
+            height: 1rem;
+            border-radius: 100%;
+			@include vertical-align;
+			left: -3px;
+			z-index: 0;
+
+		}
+
+		.card {
+			width: 27.7rem;
+			height: 10.8rem;
+			position: relative;
+            // transition: all .35s cubic-bezier(0.58, 0, 0.31, 1.22);
+            background: $white;
+			// box-shadow: $cardBoxShadow;
+			border: 1px solid $greyDarkest;
+			border-radius: 14px;
+			padding: 1rem;
+
+			&.left {
+				text-align: right;
+				left: calc(-27.7rem - 7.2rem);
+
+				&:before {
+                    right:-7rem;
+                    width: 7rem;
+				}
+
+			}
+			&.right {
+				text-align: left;
+				left:7.2rem;
+
+				&:before {
+                    left: -6.5rem;
+                    width: 6.5rem;
+				}
+			}
+
+			&:before {
+				content:'';
+				background: transparent;
+				@include vertical-align;
+				width: 7.2rem;
+				border-bottom: 2px solid $greyBlack;
+				transition: border .3s ease-in;
+			}
+
+			.info {
+				p {
+					width: 100%;
+				}
+			}
+
+		}
+	}
+}
+
+@include media ("<medium") {
+
+	.roadmap {
+		.total-line {
+            left: 2rem;
+            height: calc(100% - 11.1rem);
+		}
+		.roadmap-cover {
+			.box {
+                margin-left: 2rem;
+                
+                &:before {
+                    left: -4px;
+                }
+				.card {
+					display: flex;
+					align-items:center;
+					width: calc(100vw - 11.1rem);
+					height: 12rem;
+					left: 5rem;
+					text-align: left;
+					margin-bottom: 2rem;
+					&:before {
+						left:-4.4rem;
+						width:4.4rem;
+					}
+				}
+			}
+		}
+	}
+}

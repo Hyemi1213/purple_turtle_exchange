@@ -1,0 +1,12 @@
+@import 'utils';
+
+.logo {
+	text-align: center;
+	cursor: pointer;
+	@include flexMC;
+
+	img {
+		border: none;
+		width: 100%;
+	}
+}

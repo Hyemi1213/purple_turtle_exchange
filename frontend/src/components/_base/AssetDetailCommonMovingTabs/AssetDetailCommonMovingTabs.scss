@@ -1,0 +1,68 @@
+@import 'utils';
+
+.wrapper {
+
+    @include media('>medium') {
+        margin-top: 1.8rem;
+        padding-top: 0 !important;
+        height: 65rem;
+        // overflow-y: scroll;
+        // overflow-x: hidden;
+
+        .tabs-wrapper {
+            @include flexMC;
+
+            .menu {
+                cursor: pointer;
+                @include font($greyDarker, 1.4rem, $medium);
+                line-height: 2.3rem;
+                letter-spacing: -0.4px;
+                width: 100%;
+                text-align: center;
+                padding: 1.1rem 0;
+                
+                position: relative;
+                overflow: hidden;
+
+                &:before {
+                    content: '';
+                    background: $greyLighter;
+                    height: 0.2rem;
+                    width: 200%;
+                    @include horizontal-align;
+                    bottom: 0;
+                }
+
+                &:after {
+                    content: '';
+                    transition: all 300ms;
+                    background: transparent;
+                    height: 0.2rem;
+                    width: 0;
+                    @include horizontal-align;
+                    bottom: 0;
+                }
+
+                &.active {
+                    color: $greyDarker;
+                    font-weight: $bold;
+
+                    &:after {
+                        background-color: $greyDark;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
+        .content-wrapper {
+            // padding: 0 1.4rem;
+
+            .inner {
+                padding: 0 1.4rem;
+                margin-bottom: 2rem;
+            }
+        }
+    }
+    
+}

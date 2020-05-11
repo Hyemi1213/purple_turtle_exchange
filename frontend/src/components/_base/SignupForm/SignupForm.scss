@@ -1,0 +1,92 @@
+@import 'utils';
+
+.wrapper {
+    margin-top: 4rem;
+
+    // .input-box {
+    //     margin-bottom: 3.5rem;
+
+    //     &:last-child {
+    //         margin-bottom: 0;
+    //     }
+    // }
+    .checkbox-box {
+        border: 1px solid $greyLighter;
+        border-radius: 4px;
+        margin-top: 7.7rem;
+        
+        .checkbox-frame {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 1.3rem;
+
+            &:last-child {
+                padding-top: 0.3rem;
+            }
+
+            &.agree-all {
+                border-bottom: 1px solid $greyLighter;
+
+                .text {
+                    @include font($greyDarker, 1.2rem, $bold);
+                }
+            }
+
+            .see-btn {
+                @include font($greyDark, 1.2rem, $bold);
+                line-height: 1.9rem;
+                letter-spacing: -0.5px;
+                border-bottom: 1px solid $greyDark;
+            }
+        }
+    }
+
+    .extra-feedback {
+        @include font($danger, 1.2rem, $bold);
+        line-height: 1.9rem;
+        letter-spacing: -0.5px;
+        margin-top: 0.5rem;
+        margin-left: 1.5rem;
+        display: none;
+
+        &.show {
+            display: block;
+        }
+    }
+
+    .btn-box {
+        text-align: center;
+        margin-top: 4.6rem;
+    }
+
+    @include media('>medium') {
+        margin-top: 5rem;
+
+        .checkbox-box {
+            margin-top: 6.6rem;
+            
+            .checkbox-frame {
+                padding: 1.6rem 1.6rem;
+            }
+        }
+
+        .extra-feedback {
+            @include font($danger, 1.2rem, $bold);
+            line-height: 1.9rem;
+            letter-spacing: -0.5px;
+            margin-top: 0.5rem;
+            margin-left: 1.5rem;
+            display: none;
+
+            &.show {
+                display: block;
+            }
+        }
+
+        .btn-box {
+            text-align: center;
+            margin-top: 4.6rem;
+        }
+    }
+}

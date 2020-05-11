@@ -1,0 +1,29 @@
+@import 'utils';
+
+.custom-alert {
+    @include center-align ;
+    position: fixed !important;
+    @include font($greyBlack, 1.4rem, $bold);
+    line-height: 2rem;
+    letter-spacing: -0.2px;
+    z-index: 1100;
+    min-width: 30rem;
+
+    &.custom-success {
+        background: $successLighter;
+        border: 1px solid $successLight;
+        color: $successDark;
+    }
+
+    &.custom-danger {
+        background: $dangerLighter;
+        border: 1px solid $dangerLight;
+        color: $dangerDark;
+    }
+
+    &.custom-warning {
+        background: $warningLighter;
+        border: 1px solid $warningLight;
+        color: $warningDark;
+    }
+}

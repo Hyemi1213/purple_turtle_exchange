@@ -1,0 +1,179 @@
+@import '../AssetHistoryForm/AssetHistoryForm.scss';
+@import 'src/components/_base/PCListTable/PCListTable.scss';
+@import 'utils';
+
+.trade-page-wrapper {
+    //exchange-주문내역에서 사용됨
+    margin-top: 3.8rem;
+}
+
+@include media('>medium') {
+
+    .pc-wrapper {
+        margin-top: 8.4rem;
+    }
+
+    .body-box {
+        align-items: center;
+    }
+
+    .body-each {
+        text-transform: uppercase;
+        padding: 0 0.5rem;
+        
+        word-break: break-all;
+        //뒤에 ...
+        // text-overflow: ellipsis;
+        // overflow: hidden;
+
+        &.status {
+            font-family: 'Noto Sans KR', sans-serif;
+            font-size: 1.2rem;
+            line-height: 1.9rem;
+            letter-spacing: -0.5px;
+        }
+
+        &.sell {
+            color: $danger;
+        }
+
+        &.buy {
+            color: $success;
+        }
+
+        &.cancel {
+            img {
+                cursor: pointer;
+                width: 1.8rem;
+                height: 1.8rem;
+            }
+        }
+
+        .status-pending {
+            color: $warning;
+            padding-left: 0.4rem;
+
+            @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+                padding-left: 0;
+            }
+        }
+    }
+
+    .finished {
+        .head-each, .body-each {
+            width: 100%;
+            &:nth-child(1) {
+                max-width: 6.8rem;
+            }
+
+            &:nth-child(2) {
+                max-width: 4.2rem;
+            }
+
+            &:nth-child(3) {
+                max-width: 7rem;
+            }
+
+            &:nth-child(7) {
+                max-width: 7rem;
+            }
+
+            @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+                &:nth-child(1) {
+                    max-width: 43.8rem;
+                }
+
+                &:nth-child(2) {
+                    max-width: 20.2rem;
+                }
+
+                &:nth-child(3) {
+                    max-width: 39rem;
+                }
+
+                &:nth-child(7) {
+                    max-width: 39rem;
+                }
+            }
+        }
+    }
+
+    .unfinished {
+        .head-each, .body-each {
+            width: 100%;
+            &:nth-child(1) {
+                max-width: 7rem;
+            }
+
+            &:nth-child(2) {
+                max-width: 4.2rem;
+            }
+
+            &:nth-child(3) {
+                max-width: 7rem;
+            }
+
+            &:last-child {
+                max-width: 7rem;
+            }
+
+            @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+                &:nth-child(1) {
+                    max-width: 32rem;
+                }
+
+                &:nth-child(2) {
+                    max-width: 15.2rem;
+                }
+
+                &:nth-child(3) {
+                    max-width: 29rem;
+                }
+
+                &:nth-child(7) {
+                    max-width: 29rem;
+                }
+            }
+        }
+    }
+
+    .history {
+        .head-each, .body-each {
+            width: 100%;
+            &:nth-child(1) {
+                max-width: 7rem;
+            }
+
+            &:nth-child(2) {
+                max-width: 4.2rem;
+            }
+
+            &:last-child {
+                max-width: 7rem;
+            }
+
+            @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+                &:nth-child(1) {
+                    max-width: 16rem;
+                }
+
+                &:nth-child(2) {
+                    max-width: 11.2rem;
+                }
+
+                &:last-child {
+                    max-width: 15rem;
+                }
+            }
+        }
+    }
+
+    .back-btn {
+        margin-top: 1rem;
+        text-align: right;
+    }
+
+    .pagination {
+        margin-top: 4rem;
+    }
+}

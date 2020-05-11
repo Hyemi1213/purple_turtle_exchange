@@ -1,0 +1,13 @@
+@import 'utils';
+
+.txtarea {
+    border: 1px solid $greyLighter;
+    border-radius: 3px;
+    background: $white;
+    outline: none;
+    width: 100%;
+
+    &:focus, &.focused {
+        border-color: $primary;
+    }
+}

@@ -1,0 +1,19 @@
+@import 'utils';
+
+.dimmer {
+  animation-duration: .3s;
+  animation-fill-mode: both;
+  animation-timing-function: cubic-bezier(.5, 0, .2, 1);
+  animation-name: fadeIn;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(18, 18, 35, 0.5);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 20;
+}

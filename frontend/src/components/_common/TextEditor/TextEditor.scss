@@ -1,0 +1,10 @@
+:global .text-editor {
+    padding: 2rem 0;
+    .ql-container {
+        min-height: 20rem;
+        .ql-editor {
+            overflow-y: auto;
+            padding: 12px 15px;
+        }
+    }
+}

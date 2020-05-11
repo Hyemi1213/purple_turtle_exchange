@@ -1,0 +1,48 @@
+@import 'utils';
+
+.pagination {
+    @include flexMC;
+    li {
+        margin-right: 1.3rem;
+        &:last-child {
+            margin-right: 0;
+        }
+        .button {
+            background: $white;
+            border: 1px solid $greyLighter;
+            border-radius: 3px;
+            padding: 0;
+            @include font($greyDarker, 1.4rem, $bold);
+            line-height: 2rem;
+            letter-spacing: -0.2px;
+            width: 2.4rem;
+            height: 2.4rem;
+            @include flexMC;
+            font-size: 1.5rem;
+            transition-property: background-color, color, border-color;
+            transition-duration: .15s;
+            transition-timing-function: ease-in;
+
+            &.active {
+                background-color: $primaryLighter;
+                border-radius: 2px;
+                color: $primary;
+            }
+
+            &.btn-deactive {
+                color: $greyLight;
+            }
+
+            &.auto-width {
+                width: auto;
+                @include font($greyDark, 1.2rem, $medium);
+                line-height: 1rem;
+            }
+        }
+    }
+}
+.arrow {
+    border-color: $greyDark !important;
+    width: 0.6rem !important;
+    height: 0.6rem !important;
+}

@@ -1,0 +1,14 @@
+@import 'utils';
+
+.wrapper {
+    padding: 2rem 0 0;
+}
+
+.link {
+    border-bottom: 1px solid $info;
+    transition: 0.2s color ease;
+
+    &:hover {
+        color: $info;
+    }
+}

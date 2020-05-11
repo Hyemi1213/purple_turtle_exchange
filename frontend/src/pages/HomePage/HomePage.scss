@@ -1,0 +1,43 @@
+@import 'utils';
+
+.page {
+    .title-box {
+        text-align: center;
+
+        &.first {
+            .main-title {
+                font-family: 'Montserrat', sans-serif;
+                @include font($greyDarker, 2.6rem, $bold);
+                line-height: 2.2rem;
+                letter-spacing: -0.2px;
+            }
+
+            .semi-title {
+                @include font($greyDarker, 1.4rem, $bold);
+                margin-top: 0.4rem;
+                line-height: 2.3rem;
+                letter-spacing: -0.4px;
+            }
+        }
+
+        &.second {
+            margin-top: 3.8rem;
+            margin-bottom: 5.6rem;
+
+            .content {
+                @include font($greyDark, 1.4rem, $medium);
+                line-height: 2.3rem;
+                letter-spacing: -0.4px;
+            }
+        }
+    }
+
+    @include media('>medium') {
+        .title-box {
+
+            &.first {
+                margin-top: 7.5rem;
+            }
+        }
+    }
+}

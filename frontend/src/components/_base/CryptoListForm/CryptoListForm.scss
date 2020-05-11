@@ -1,0 +1,101 @@
+@import 'utils';
+@import 'src/components/_base/DefaultTable/DefaultTable.scss';
+
+.card-wrapper {
+    .wrapper {
+        .search-bar {
+            margin: 0.8rem 0;
+        }
+
+        .body-box {
+            position: relative;
+        }
+
+        .head-each, .body-each {
+            width: 25%;
+        }
+
+        .head-each {
+            cursor: pointer;
+            font-size: 1.2rem;
+            &:nth-child(1){
+                padding-left: 2rem;
+            }
+        }
+
+        .body-each {
+            cursor: pointer;
+            word-break: break-all;
+
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+
+            &:nth-child(2) {
+                padding-left: 2rem;
+            }
+
+            &.pair {
+                text-transform: uppercase;
+                font-weight: $bold;
+            }
+
+            &.star {
+                @include vertical-align;
+                left: 0;
+                text-align: left;
+                width: auto;
+            }
+            
+            &.plus {
+                color: $success;
+            }
+
+            &.minus {
+                color: $danger;
+            }
+        }
+    }
+
+    @include media('>medium') {
+        height: 40rem;
+        padding: 1rem 1.2rem!important;
+        border-radius: 6px !important;
+        margin: 0.8rem 0 0.6rem;
+    }
+}
+
+
+.market-wrapper {
+    @include media('>medium') {
+        height: 6.4rem;
+        display: flex;
+        align-items: center;
+        border-radius: 6px !important;
+
+        p {
+            font-family: 'Montserrat', sans-serif;
+            text-transform: uppercase;
+        }
+
+        .title {
+            @include font($greyDarker, 1.8rem, $bold);
+            line-height: 2.2rem;
+            letter-spacing: -0.2px;
+            margin: 0 0.8rem 0 0.6rem;
+        }
+
+        .semi-title {
+            @include font($greyDark, 1.3rem, $medium);
+            line-height: 1.8rem;
+            letter-spacing: -0.3px;
+        }
+    }
+}
+
+@include media('>medium') {
+    .scroll-box {
+        height: 27rem;
+        margin-right: -0.6rem;
+    }
+}

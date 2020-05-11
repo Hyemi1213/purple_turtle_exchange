@@ -1,0 +1,14 @@
+@import 'utils';
+
+.btn-box {
+    margin-top: 3.2rem;
+    text-align: center;
+
+    a {
+        display: block;
+		padding: 0.8rem 2.3rem;
+    }
+    @include media('>medium') {
+        margin-top: 5rem;
+    }
+}

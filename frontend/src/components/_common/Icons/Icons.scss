@@ -1,0 +1,56 @@
+@import 'utils';
+
+.arrow {
+    border-style: solid;
+    border-color: $greyDarker;
+    border-width: 0px 2px 2px 0px;
+    width: 0.8rem;
+    height: 0.8rem;
+
+    &.top {
+        transform: rotate(-135deg);
+    }
+
+    &.left {
+        transform: rotate(135deg) translate(-0.1rem, -0.1rem);
+    }
+
+    &.right {
+        transform: rotate(-45deg) translate(-0.1rem, -0.1rem);
+    }
+
+    &.bottom {
+        transform: rotate(45deg);
+    }
+
+}
+
+.x-mark {
+    width: 2rem;
+    height: 2rem;
+    position: relative;
+
+    &:before, &:after {
+        content: '';
+        background: black;
+        position: absolute;
+        width: 0.2rem;
+        height: 2.1rem;
+        left: 0.9rem;
+    }
+
+    &:before {
+        transform: rotate(45deg);
+    }
+
+    &:after {
+        transform: rotate(-45deg);
+    }
+}
+
+.sort-arrow { 
+    @include flexMC;
+    &.clicked {
+        transform: rotate(180deg);
+    }
+}

@@ -1,0 +1,90 @@
+@import 'utils';
+
+.wrapper {
+    background: $greyLightest;
+
+    .menu-box {
+        text-align: center;
+        padding: 1.8rem 0;
+        border-bottom: 1px solid $greyLight;
+
+        .link {
+            @include font($greyDark, 1.2rem, $medium);
+            line-height: 1.9rem;
+            letter-spacing: -0.5px;
+
+            &~ .link {
+                margin-left: 1.8rem;
+            }
+        }
+    }
+
+    .middle-box {
+        padding: 1.2rem 0 1.7rem;
+
+        .logo {
+            margin-bottom: 1.2rem;
+        }
+
+        .extra {
+            @include font($greyDark, 1rem, $medium);
+            line-height: 1.4rem;
+            letter-spacing: -0.5px;
+
+            &~ .extra {
+                margin-top: 0.6rem;
+            }
+        }
+    }
+    
+    .copyright {
+        font-family: 'Montserrat', sans-serif;
+        text-align: center;
+        @include font($greyDark, 1rem, $medium);
+        letter-spacing: -0.3px;
+        line-height: 1.8rem;
+        border-top: 1px solid $greyLight;
+        padding: 0.8rem 0 1rem;
+    }
+
+    @include media(">medium") {
+        background: $white;
+        border-top: 1px solid $greyLight;
+
+        .menu-box {
+            padding: 1.2rem 0;
+            border-color: $greyLighter;
+
+            .link {
+                color: $greyDarker;
+
+                &~ .link {
+                    margin-left: 6.1rem;
+                }
+            }
+        }
+
+        .middle-box {
+            padding: 1.8rem 0 2.1rem;
+
+            .logo {
+                margin-bottom: 0;
+            }
+
+            .extra {
+                font-size: 1.2rem;
+                line-height: 1.9rem;
+
+                &~ .extra {
+                    margin-top: 0.5rem;
+                }
+            }
+        }
+        
+        .copyright {
+            background: $greyLightest;
+            border-top: none;
+            padding: 0.1rem;
+        }
+    }
+}

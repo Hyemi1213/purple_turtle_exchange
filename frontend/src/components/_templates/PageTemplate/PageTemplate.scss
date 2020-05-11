@@ -1,0 +1,18 @@
+@import 'utils';
+
+.page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+    .main {
+        flex-grow: 1;
+        margin-top: $headerMobile;
+        padding-bottom: 6.2rem;
+
+        @include media(">medium") {
+            margin-top: $headerPc !important;
+            // padding-bottom: 0;
+        }
+    }
+}

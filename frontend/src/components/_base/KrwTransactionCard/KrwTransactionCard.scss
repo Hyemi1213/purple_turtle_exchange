@@ -1,0 +1,50 @@
+@import '../TransactionCard/TransactionCard.scss';
+@import 'utils';
+
+.main-title {
+    @include font($greyDarker, 1.4rem, $bold);
+    line-height: 2.3rem;
+    letter-spacing: -0.4px;
+    margin-bottom: 0.8rem;
+    margin-top: 6rem;
+
+    span {
+        @include font($greyDark, 1.2rem, $medium);
+        line-height: 1.9rem;
+        letter-spacing: -0.5px;
+    }
+}
+.wrapper {
+    .title-box {
+        .title {
+            font-size: 1.2rem;
+            line-height: 1.9rem;
+            letter-spacing: -0.5px;
+        }
+        .icon {
+            background-color: transparent;
+            &:after {
+                background-image: url(/src/static/images/deposit_icon.svg);
+            }
+        }
+    }
+
+    .info-box {
+        margin-top: .9rem;
+        li {
+            @include font($info, 1rem, $medium);
+            line-height: 1.4rem;
+            letter-spacing: -0.5px;
+        }
+    }
+
+    &.sell {
+        .title-box {
+            .icon {
+                &:after {
+                    background-image: url(/src/static/images/withdrawl_icon.svg);
+                }
+            }
+        }
+    }
+}

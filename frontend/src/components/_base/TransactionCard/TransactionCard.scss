@@ -1,0 +1,111 @@
+@import 'utils';
+
+.common-text-style1 {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.8rem;
+    letter-spacing: -0.3px;
+}
+
+.wrapper {
+
+    margin-bottom: 0.8rem;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    .title-box {
+        display: flex;
+        align-items: center;
+        margin-left: 0.4rem;
+
+        .icon {
+            background: $success;
+            width: 1.4rem;
+            height: 1.4rem;
+            border-radius: 100px;
+            @include flexMC;
+            margin-right: 0.4rem;
+
+            &:after {
+                content: '';
+                background-image: url(/src/static/images/buy_icon.svg);
+                background-repeat: no-repeat;
+                width: 100%;
+                height: 100%;
+                background-position: center;
+            }
+        }
+
+        .title {
+            @extend .common-text-style1;
+            @include font($success, 1.3rem, $bold);
+        }
+    }
+
+    .cancel-box {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        img {
+            cursor: pointer;
+            margin-left: 0.4rem;
+        }
+    }
+
+    .date {
+        @extend .common-text-style1;
+        @include font($greyDark, 1rem, $medium);
+        text-align: right;
+    }
+
+    .content-box {
+        border-top: 1px solid $greyLighter;
+        padding: 0.3rem 0;
+
+        &:nth-of-type(2) {
+            margin-top: 0.7rem;
+            border-top: none;
+        }
+
+        .title {
+            @include font($greyDark, 1.2rem, $bold);
+            line-height: 1.9rem;
+            letter-spacing: -0.5px;
+            padding-left: 0.4rem;
+        }
+
+        .content {
+            @extend .common-text-style1;
+            text-align: right;
+            @include font($greyDark, 1.3rem, $medium);
+            text-transform: uppercase;
+        }
+
+        &.total {
+            border-color: $greyLight;
+            padding-top: 0.4rem;
+            padding-bottom: 0;
+            .content {
+                font-weight: $bold;
+            }
+        }
+    }
+    
+
+    &.sell {
+        .title-box {
+            .icon {
+                background: $danger;
+                &:after {
+                    background-image: url(/src/static/images/sell_icon.svg);
+                }
+            }
+
+            .title {
+                color: $danger;
+            }
+        }
+    }
+}

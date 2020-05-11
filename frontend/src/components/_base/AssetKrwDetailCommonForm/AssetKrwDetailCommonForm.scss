@@ -1,0 +1,32 @@
+@import '../AssetDetailCommonForm/AssetDetailCommonForm.scss';
+@import 'utils';
+
+.wrapper {
+    .krw-card {
+        padding: 0.9rem 1.2rem !important;
+    }
+    .backaccount-box {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.7rem 1.3rem;
+
+        p {
+            line-height: 1.9rem;
+            letter-spacing: -0.5px;
+        }
+
+        .title {
+            @include font($info, 1.2rem, $bold);
+        }
+
+        .content {
+            @include font($greyDark, 1.2rem, $medium);
+
+            span {
+                font-weight: $bold;
+                margin-right: 0.6rem;
+            }
+        }
+    }
+}

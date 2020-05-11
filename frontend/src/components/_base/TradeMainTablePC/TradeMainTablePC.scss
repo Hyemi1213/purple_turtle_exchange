@@ -1,0 +1,43 @@
+@import 'utils';
+
+.wrapper {
+    @include media('>medium') {
+        padding: 1rem 1.2rem !important;
+
+        .title-box {
+            display: flex;
+            align-items: center;
+
+            .title {
+                font-family: 'Montserrat', sans-serif;
+                @include font($greyDarker, 1.4rem, $bold);
+                line-height: 2rem;
+                letter-spacing: -0.2px;
+                margin-bottom: 1.2rem;
+            }
+
+            .extra-menu-box {
+                display: flex;
+                margin-bottom: 1.4rem;
+
+                .menu {
+                    @include font($greyDark, 1.2rem, $medium);
+                    line-height: 1.9rem;
+                    letter-spacing: -0.5px;
+                    margin-left: 8.3rem;
+                    cursor: pointer;
+
+                    & ~ .menu {
+                        margin-left: 1.3rem;
+                    }
+
+                    &.active {
+                        color: $greyDarker;
+                        font-weight: $bold;
+                    }
+                }
+            }
+        }
+        
+    }
+}

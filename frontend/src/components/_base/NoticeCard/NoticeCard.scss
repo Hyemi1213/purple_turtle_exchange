@@ -1,0 +1,57 @@
+@import 'utils';
+
+.wrapper {
+    padding: 0.8rem 0;
+    border-bottom: 1px solid $greyDark;
+    display: flex;
+    position: relative;
+    min-height: 6rem;
+    cursor: pointer;
+
+    &:after {
+        content: '';
+        width: 4rem;
+        height: 0.3rem;
+        background: $greyDark;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    }
+
+    .number {
+        @include font($greyLight, 1.2rem, $bold);
+        line-height: 1.9rem;
+        letter-spacing: -0.5px;
+        margin-right: 1.3rem;
+        min-width: 4rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    .date {
+        display: block;
+        font-family: 'Montserrat', sans-serif;
+        @include font($greyLight, 1rem, $medium);
+        line-height: 1.8rem;
+        letter-spacing: -0.3px;
+    }
+
+    .title {
+        @include font($greyDarker, 1.4rem, $bold);
+        line-height: 2.3rem;
+        letter-spacing: -0.4px;
+
+    }
+
+    @include media('>medium') {
+        align-items: center;
+        padding-right: 6rem;
+
+        .date {
+            position: absolute;
+            right: 0;
+        }
+    }
+    
+}

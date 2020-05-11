@@ -1,0 +1,366 @@
+@import 'utils';
+
+.header-wrapper {
+	position: fixed;
+	width: 100%;
+	background: $white;
+	z-index: $Zheader;
+	transition: all .2s ease-in;
+	top: 0;
+
+	&.shadow {
+		box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3) !important;
+
+		@include media(">medium") {
+			.main-header {
+				.menu-box {
+					.menu-list{
+						color: $greyBlack;
+					}
+				}
+			}
+		}
+	}
+
+	@include media(">medium") {
+		border-bottom: 1px solid $greyLight;
+		position: absolute;
+
+		&.shadow {
+
+		}
+	}
+		
+	.sidebar {
+		width: 81%;
+		background: $white;
+		box-shadow: 0px 4px 10px rgba(84, 86, 98 , 0.2);
+		padding-top: 7rem;
+		padding-left: 5.6rem;
+		align-items: flex-start;
+		right: -100%;
+		opacity: 0;
+		transition: all .2s linear;
+		z-index: -1;
+
+		@include media(">medium") {
+			display: none;
+		}
+
+		&.open {
+			right: 0;
+			opacity: 1;
+			z-index: $Zheader + 1;
+		}
+
+		.menu-list {
+			@include flexMC;
+			@include font($greyDark, 1.2rem, $medium);
+			line-height: 1.9rem;
+			letter-spacing: -0.5px;
+			margin-bottom: 3rem;
+			cursor: pointer;
+			position: relative;
+			padding-left: 2.5rem;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+
+			&:nth-child(6) {
+				margin-top: 8.2rem;
+			}
+
+			img {
+				@include vertical-align;
+				left: 0;
+			}
+		}
+	}
+
+	.main-header {
+		height: $headerMobile;
+		@include flexMC;
+
+		@include media(">medium") {
+			height: $headerPc;
+			// justify-content: space-between;
+		}
+
+		.back-arrow, .back-home, .main-logo {
+			//햄버거 스타일이랑 동시에 감
+			position: absolute;
+			left: 0;
+			top: 0;
+			cursor: pointer;
+			z-index: 51;
+			transition: all .3s ease-in;
+			padding: 1.8rem 1.5rem;
+			height: 4.6rem;
+			display: flex;
+		}
+
+		.back-arrow {
+			padding: 1.8rem 1.5rem;
+		}
+
+		.back-home {
+			padding: 1.5rem;
+		}
+
+		.main-logo {
+			width: 9.2rem;
+			height: $headerPc;
+			padding: 1.8rem 1.5rem;
+
+			img {
+				width: 9.2rem;
+				height: 2.8rem;
+			}
+		}
+
+		.menu-title {
+			font-family: 'Montserrat', sans-serif;
+			@include font($greyDarkest, 1.4rem, $bold);
+			line-height: 2rem;
+			letter-spacing: -0.2px;
+			text-transform: uppercase;
+		}
+
+		.hamburger { 
+			@include media(">medium") {
+				display: none;
+			}
+		}
+
+		.logo {
+			width: 4rem;
+			@include media(">medium") {
+				display: block;
+				width: 5rem;
+			}
+		}
+
+		.menu-box {
+			@include flexMC;
+
+			.menu-list {
+				cursor: pointer;
+				margin-right: 7.2rem;
+				a {
+					@include font($greyDark, 1.4rem, $medium);
+					position: relative;
+				
+					&:after {
+						content: '';
+						transition: all 300ms;
+						background: transparent;
+						height: 0.3rem;
+						width: 0;
+						@include horizontal-align;
+						bottom: -2rem;
+					}
+
+					&.active {
+						color: $greyDarker;
+						font-weight: $bold;
+						
+						&:after {
+							background-color: $greyDark;
+							width: 6rem;
+						}
+					}
+				}
+
+				&:last-child {
+					margin-right: 0;
+				}
+				
+				&:hover, &.active {
+
+					a {
+						color: $greyDarker;
+						font-weight: $bold;
+
+						&:after {
+							background-color: $greyDark;
+							width: 6rem;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.added-menu-box {
+
+		.menu {
+			@include font($greyDarker, 1.2rem, $medium);
+			line-height: 1.9rem;
+			letter-spacing: -0.5px;
+			text-align: center;
+			cursor: pointer;
+		}
+
+		.appeared-menu {
+			font-weight: $bold;
+			position: relative;
+
+			&:before {
+				content: '';
+				background: $greyLighter;
+				height: 0.2rem;
+				width: 200%;
+				@include horizontal-align;
+				bottom: 0;
+				z-index: -1;
+			}
+		}
+
+		&.main-menu {
+			@include flexMC;
+
+			.appeared-menu {
+				width: 100%;
+				padding-bottom: 0.6rem;
+				// border-bottom: 2px solid $greyLighter;
+				min-height: 2.6rem;
+				position: relative;
+				font-weight: $medium;
+
+				&:after {
+					content: '';
+					transition: all 300ms;
+					background: transparent;
+					height: 0.2rem;
+					width: 0;
+					@include horizontal-align;
+					bottom: 0;
+				}
+
+				&.active {
+					font-weight: $bold;
+					&:after {
+						background-color: $greyDark;
+						width: 10.7rem;
+					}
+					// border-color: $greyDark;
+				}
+			}
+		}
+
+		&.main-extended-menu {
+
+			.clicked-menu {
+				text-align: center;
+
+				.appeared-menu {
+					position: relative;
+					@include flexMC;
+
+					.title {
+						position: relative;
+						padding-bottom: 0.6rem;
+
+						@keyframes menu-bottom-effect {
+							0% {
+								width: 0;
+							}
+							100% {
+								width: 10.7rem;
+							}
+						}
+
+						&:after {
+							content: '';
+							background: $greyDark;
+							height: 0.2rem;
+							// width: 10.7rem;
+							@include horizontal-align;
+							bottom: 0;
+							animation-name: menu-bottom-effect;
+							animation-duration: 300ms;
+							animation-fill-mode: forwards;
+						}
+					}
+
+					.dropdown-icon {
+						position: relative;
+						top: -3px;
+						left: 25px;
+						border-color: $greyDark;
+					}
+				}
+			}
+
+			.hidden-menu {
+				text-align: center;
+
+				height: 0;
+				overflow: hidden;
+
+				&.open {
+					// height: 15.8rem;
+					height: 100%;
+					padding: 0 1.7rem;
+					padding-bottom: 1.7rem;
+					// box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3) !important;
+
+				}
+
+				.menu {
+					min-width: 8.6rem;
+					min-height: 3rem;
+					line-height: 3rem;
+					margin-top: 1.7rem;
+					&:hover, &.active {
+						background: $greyLightest;
+						border-radius: 14px;
+					}
+				}
+			}
+		}
+	}
+
+	.mypage-list-sub-menu {
+		@include flexMC;
+		padding: 1.2rem 0;
+		border-top: 1px solid $greyLightest;
+
+		.menu-list-box{
+			@include flexMC;
+
+			& ~ .menu-list-box {
+				margin-left: 6rem;
+			}
+
+			.img {
+				margin-right: 0.4rem;
+			}
+
+			.menu {
+				@include font($greyDark, 1.2rem, $medium);
+				line-height: 1.9rem;
+				letter-spacing: -0.5px;
+				transition: .2s all ease-in;
+			}
+
+			.menu-list-box-link {
+				@include flexMC;
+				cursor: pointer;
+				border-radius: 12px;
+				transition: .2s all ease-in;
+				padding: 0.2rem 1.6rem;
+
+				&:hover, &.active {
+					background: $greyLightest;
+
+					.menu {
+						font-weight: $bold;
+					}
+				}
+			}
+		}
+	}
+}
+

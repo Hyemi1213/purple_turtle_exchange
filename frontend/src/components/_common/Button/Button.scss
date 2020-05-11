@@ -1,0 +1,116 @@
+@import 'utils';
+
+.button {
+	//default
+	border: none;
+	cursor: pointer;
+	display:inline-block;
+	font-family: inherit;
+    outline: none;
+	padding:0;
+	text-align: center;
+
+	//base
+	@include font($white, 1.4rem, $bold);
+	line-height: 2rem;
+	padding: 0.8rem 2.3rem;
+	background: $primary;
+	transition: background-color .1s ease-in;
+	min-width: 11.8rem;
+	border-radius: 2px;
+
+	&.hasLink {
+		padding: 0;
+		// a {
+		// 	padding: 0.8rem 2.3rem;
+		// }
+	}
+
+	&.linkStyle, &.linkStyleDark {
+		background: transparent;
+		// min-height: 3.6rem;
+
+		a, span {
+			@include font($primary, 1.2rem, $bold);
+			color: $primary !important;
+			line-height: 1.9rem;
+			letter-spacing: -0.5px;
+			border-bottom: 1px solid $primary;
+		}
+
+		&:hover {
+			background: transparent;
+		}
+	}
+
+	&.linkStyleDark {
+		a, span {
+			color: $greyDark !important;
+			border-color: $greyDark !important;
+		}
+	}
+
+	a {
+		// display: block;
+		color: inherit;
+	}
+
+	&:hover {
+		background: $primaryDark;
+	}
+
+	&.no-padding {
+		padding: 0;
+	}
+	
+	&.disabled {
+		background: $greyLightest;
+		color: $greyDark;
+		// cursor: not-allowed;
+	}
+
+	&.warning {
+		background: $danger;
+		color: $white;
+
+		&:hover {
+			background: $dangerDark;
+		}
+	}
+
+	//white
+	&.reverse {
+		background: $white;
+		border: 1px solid $greyLight;
+		color: $greyDarker;
+		transition: color .1s ease-in;
+
+		&:hover {
+			color: $primary;
+		}
+	}
+
+	//grey
+	&.greystyle {
+		background: $greyDarker;
+		@include font($white, 1.4rem, $bold);
+		line-height: 2rem;
+		letter-spacing: -0.5px;
+	}
+
+	//마이페이지 뒤로가기 버튼
+	&.pcMypage {
+		min-width: unset;
+		padding: 0;
+		a {
+            border: none;
+            @include flexMC;
+			display: inline-flex;
+			
+			div {
+				border-color: $greyDark;
+                margin-right: 1.1rem;
+			}
+        }
+	}
+}

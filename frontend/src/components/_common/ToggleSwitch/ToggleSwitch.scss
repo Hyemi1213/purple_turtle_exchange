@@ -1,0 +1,119 @@
+@import 'utils';
+
+$switchHeight : 3.6rem;
+
+.toggle-group {
+	position: relative;
+
+	.onoffswitch-label {
+		display: block;
+		overflow: hidden;
+		cursor: pointer;
+		border-radius: 18px;
+		margin: 0;
+		width: 12rem;
+		height: $switchHeight;
+
+		.onoffswitch-inner {
+			width: 200%;
+			margin-left: -100%;
+			transition: margin 0.15s ease-in-out;
+
+			&:before, &:after {
+				float: left;
+				width: 50%;
+				height: $switchHeight;
+				padding: 0;
+				line-height: $switchHeight;
+				@include font($white, 1.4rem, $medium);
+				letter-spacing: -0.2px;
+			}
+
+			&:before {
+				content: "Active";
+				padding-left: 1.8rem;
+				background-color: $primary;
+			}
+
+			&:after {
+				content: "Inactive";
+				padding-right: 1.8rem;
+				background-color: $greyLight;
+				text-align: right;
+			}
+		}
+		.onoffswitch-switch {
+			width: 3rem;
+			height: 3rem;
+			margin: 0;
+			background: $white;
+			box-shadow: -1px 1px 2px rgba(0, 0, 0, 0.25);
+			border-radius: 50%;
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			right: calc(100% - 3.3rem);
+			transition: right 0.15s ease-in-out;
+			
+		}
+
+		&:hover {
+			
+			.onoffswitch-inner {
+
+				&:before, &:after {
+					transition: background-color .15s ease-in-out;
+				}
+				
+				&:before {
+					background-color: $primaryDark;
+				}
+				&:after {
+					background-color: $greyDark;
+				}
+			}
+		}
+	}
+
+	input[type=checkbox] {
+		position: absolute;
+        width: 1px; 
+        height: 1px; 
+        padding: 0; 
+        margin: -1px; 
+        overflow: hidden; 
+        clip:rect(0,0,0,0); 
+        border: 0;
+
+		&:checked ~  .onoffswitch-label .onoffswitch-inner {
+			margin-left: 0;
+		}
+
+		&:checked ~  .onoffswitch-label .onoffswitch-switch {
+			right: 0.3rem;
+  			box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+		}
+
+		&:focus ~  {
+			outline: thin dotted #333;
+  			outline: 0;
+		}
+		  
+	}
+
+	&.disable {
+		.onoffswitch-label {
+			cursor: not-allowed;
+			opacity: .8;
+			.onoffswitch-inner {
+				&:before {
+					background-color: $primaryLight;	
+				}
+				&:after {
+					background-color: $greyLighter;
+				}
+			}
+		}
+	}
+}
+

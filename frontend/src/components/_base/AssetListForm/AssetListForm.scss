@@ -1,0 +1,51 @@
+@import 'utils';
+
+.krw-asset-box {
+    margin-bottom: 1.4rem;
+}
+.krw-value-box {
+    background: $white;
+    border: 1px solid $greyLighter;
+    box-shadow: 1px 1px 8px rgba(18, 18, 35, 0.12);
+    border-radius: 3px;
+    padding: 0.7rem 1.6rem;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.8rem;
+
+    .title {
+        @include font($greyDark, 1.2rem, $bold);
+        line-height: 1.9rem;
+        letter-spacing: -0.5px;
+    }
+
+    .val {
+        font-family: 'Montserrat', sans-serif;
+        @include font($greyDark, 1.3rem, $medium);
+        line-height: 1.8rem;
+        letter-spacing: -0.3px;
+
+        .currency {
+            font-size: 1rem;
+            margin-left: 0.2rem;
+        }
+    }
+}
+
+.search-bar {
+    margin: 0.4rem 0 0.8rem;
+}
+
+.asset-card {
+    & ~ .asset-card {
+        margin-top: 1rem;
+    }
+
+    &:last-child {
+        margin-bottom: 2rem;
+    }
+}
+
+.scroll-box {
+    height: 65rem;
+}

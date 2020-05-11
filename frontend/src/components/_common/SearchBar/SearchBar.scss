@@ -1,0 +1,39 @@
+@import 'utils';
+
+.wrapper {
+    display: flex;
+    position: relative;
+
+    .extra-box {
+        height: 3.2rem;
+        line-height: 3.2rem;
+    }
+
+    .search-input {
+        background: $white;
+        display: block;
+        padding: 0.6rem 1.2rem;
+        height: 3.2rem;
+        line-height: 3.2rem;
+        border: 1px solid $greyLight;
+        border-radius: 4px;
+        @include font($greyDark, 1.2rem, $medium);
+
+        @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+            line-height: 1.6rem;
+        }
+    }
+    .search-icon-frame {
+        @include vertical-align;
+        right: 0;
+        padding: 0.9rem 1.2rem;
+        cursor: pointer;
+
+        .search-icon {
+
+          path {
+              fill: $primary;
+          }
+        }
+    }
+}

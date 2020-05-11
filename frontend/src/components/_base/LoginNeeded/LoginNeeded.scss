@@ -1,0 +1,23 @@
+@import 'utils';
+
+.wrapper {
+    background: $white;
+    border-radius: 14px;
+    border: 1px solid $greyLightest;
+    opacity: 0.98;
+    text-align: center;
+    padding: 3.2rem 0 4rem;
+
+    .text {
+        @include font($greyDarker, 1.2rem, $medium);
+        line-height: 1.9rem;
+        letter-spacing: -0.5px;
+        margin: 2.2rem 0 3.3rem;
+    }
+
+    .btn {
+        a {
+            padding: 0.8rem 2.3rem;
+        }
+    }
+}

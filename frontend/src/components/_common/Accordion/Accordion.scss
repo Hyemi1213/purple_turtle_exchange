@@ -1,0 +1,33 @@
+@import 'utils';
+
+.dropdown {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	cursor: pointer;
+
+	.img {
+		transition: transform .3s ease-in;
+		&.open {
+			transform: rotate(-180deg);
+		}
+	}
+	
+}
+
+.accordion-content {
+	transition: .3s all ease-in-out;
+	overflow: hidden;
+	animation-duration: .3s;
+	animation-fill-mode: both;
+	animation-timing-function: ease-in-out;
+
+	&.close {
+		height: 0;
+		animation-name: fadeOut;
+	}
+	&.open {
+		height: 100%;
+		animation-name: fadeIn;
+	}
+}

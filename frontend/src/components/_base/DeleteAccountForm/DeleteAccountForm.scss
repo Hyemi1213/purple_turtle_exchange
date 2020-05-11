@@ -1,0 +1,102 @@
+@import 'utils';
+
+.wrapper {
+    @include media('>medium') {
+        margin-top: 3.4rem;
+    }
+}
+
+.pc-title {
+    @include media('>medium') {
+        margin-bottom: 3.1rem;
+    }
+}
+
+.box {
+    padding: 0 1.8rem;
+    &:first-of-type {
+        margin-bottom: 3rem;
+    }
+    &:last-of-type {
+        margin-top: 1.4rem;
+    }
+    .title {
+        @include font($greyDarker, 1.4rem, $bold);
+        line-height: 2.3rem;
+        letter-spacing: -0.4px;
+        margin-bottom: 0.8rem;
+
+    }
+    .content {
+        @include font($greyDark, 1.2rem, $medium);
+        line-height: 1.9rem;
+        letter-spacing: -0.5px;
+        position: relative;
+        margin-left: 1rem;
+
+        &:before {
+            content: '·';
+            position: absolute;
+            left: -1rem;
+            top: 0;
+        }
+
+        &.dash {
+            &:before {
+                content: '-';
+            }
+        }
+    }
+
+    @include media('>medium') {
+        padding: 0;
+
+        &:first-of-type {
+            margin-bottom: 3.4rem;
+        }
+        &:last-of-type {
+            margin-top: 3.1rem;
+        }
+        .title {
+            font-size: 1.7rem;
+            margin-bottom: 1rem;
+
+        }
+        .content {
+            font-size: 1.4rem;
+            line-height: 2.3rem;
+            letter-spacing: -0.4px;
+        }
+    }
+}
+
+.checkbox {
+    text-align: center;
+    margin: 3.2rem auto 3.6rem;
+
+    @include media('>medium') {
+        margin: 4.5rem auto 4.1rem;
+    }
+}
+
+.checkbox-label {
+    @include font($greyDarker, 1.4rem, $medium);
+    line-height: 2.3rem;
+    letter-spacing: -0.4px;
+}
+.btn-box {
+    text-align: center;
+}
+
+.back-box {
+    text-align: center;
+    margin-top: 3.1rem;
+}
+
+.custom-modal {
+    .content {
+        @include font($greyDarkest, 1.6rem, $medium);
+        padding-top: 3rem;
+        text-align: center;
+    }
+}

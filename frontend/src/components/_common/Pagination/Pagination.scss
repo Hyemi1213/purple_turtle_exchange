@@ -1,0 +1,86 @@
+@import 'utils';
+
+.pagination {
+    @include flexMC;
+    li {
+        margin-right: 1.5rem;
+        &:last-child {
+            margin-right: 0;
+        }
+        button {
+            background: none;
+            border: none;
+            border-radius: 2px;
+            padding: 0.1rem 0.6rem;
+            font-family: 'Montserrat', sans-serif;
+            @include font($greyDarker, 1.4rem, $bold);
+            @include media (">large") {
+                font-size: 1.8rem;
+            }
+            line-height: 2rem;
+            letter-spacing: -0.2px;
+            height: 100%;
+            @include flexMC;
+            font-size: 1.5rem;
+            transition-property: background-color, color, border-color;
+            transition-duration: .15s;
+            transition-timing-function: ease-in;
+
+            &.active {
+                background-color: $primary;
+                border-radius: 2px;
+                color: $white;
+            }
+
+            &.btn-deactive {
+                color: $greyLight;
+                div {
+                    border-color: $greyLight;
+                }
+            }
+        }
+
+        &:hover {
+
+            button.number {
+                background-color: $primaryLighter;
+                border-radius: 2px;
+                color: $greyDarker;
+            }
+        }
+    }
+}
+
+.custom-pagination {
+    .custom-item {
+        
+    }
+    .custom-link {
+        background: none;
+        border: none;
+        border-radius: 2px;
+        padding: 0.1rem 0.6rem;
+        @include font($greyDarker, 1.4rem, $bold);
+        line-height: 2rem;
+        letter-spacing: -0.2px;
+        height: 100%;
+        @include flexMC;
+        transition-property: background-color, color, border-color;
+        transition-duration: .15s;
+        transition-timing-function: ease-in;
+
+        &.active {
+            color: $white;
+        }
+
+        &:hover {
+            background-color: $primaryLighter;
+            border-radius: 2px;
+            color: $primary;
+
+            .arrow {
+                border-color: $primary;
+            }
+        }
+    }
+}

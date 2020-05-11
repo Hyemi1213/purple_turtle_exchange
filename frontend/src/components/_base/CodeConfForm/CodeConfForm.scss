@@ -1,0 +1,32 @@
+@import 'utils';
+
+.wrapper {
+    margin-top: 2rem;
+
+    .btn-box {
+        text-align: center;
+        margin-top: 5.3rem;
+    }
+
+    .resend-box {
+        margin-top: 9.6rem;
+        text-align: center;
+        .info {
+            @include font($greyDark, 1.2rem, $medium);
+            line-height: 1.9rem;
+            letter-spacing: -0.5px;
+        }
+        .resend-btn {
+            margin-top: 1.8rem;
+            a {
+                font-size: 1.4rem;
+            }
+        }
+    }
+
+    @include media('>medium') {
+        margin-top: 5rem;
+
+    }
+    
+}

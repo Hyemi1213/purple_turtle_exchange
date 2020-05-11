@@ -1,0 +1,187 @@
+@import 'utils';
+
+abbr, address, article, aside, audio, b, blockquote, body, canvas, caption, cite, code, dd, del, details, dfn, div, dl, dt, em, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, p, pre, q, samp, section, small, span, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, ul, var, video {
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+  border: 0;
+  outline: 0;
+  background: transparent;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+html, body {
+	margin: 0;
+	padding: 0 !important;
+	box-sizing: border-box;
+	font-family: 'Noto Sans KR', sans-serif;
+	font-size: 10px;
+  // background-color: $backgroundColor;
+	overflow-x: hidden;
+	scroll-behavior: smooth;
+	min-height: 100vh;
+}
+
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+a {
+	display: inline-block;
+	color: inherit;
+	margin: 0;
+	padding: 0;
+	vertical-align: baseline;
+	text-decoration: none;
+	border: 0;
+	background: transparent;
+	
+	&:visited, &:hover, &:focus, &:active {
+		color: inherit;
+    	text-decoration: none;
+		outline: none !important;
+		box-shadow: none !important;
+	}
+}
+
+button {
+	color: inherit;
+	font-weight: inherit;
+	background: none;
+	border: none;
+	
+	&:focus {
+		outline: none;
+	}
+}
+
+input {
+	outline: none;
+}
+
+input::-ms-clear {
+    display: none;
+}
+
+li {
+	list-style-type: none;
+	list-style: none;
+}
+
+main {
+	display: block;
+}
+
+table, thead, tbody, tr, th, td {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+:global .pl-none {
+  	padding-left: 0 !important;
+}
+
+:global .pr-none {
+  	padding-right: 0 !important;
+}
+
+:global .p-pl-none {
+	@include media(">medium") {
+		padding-left: 0 !important;
+	}
+}
+
+:global .p-pr-none {
+	@include media(">medium") {
+		padding-right: 0 !important;
+	}
+}
+
+:global .pl-pr-none { 
+  	padding-left: 0 !important;
+  	padding-right: 0 !important;
+}
+
+:global .m-pl-pr-none {
+	@include media("<medium") {
+		padding-left: 0 !important;
+  	padding-right: 0 !important;
+	}
+}
+
+:global .ml-minus {
+	margin-left: -14px;
+}
+
+:global .g-pc-only {
+	display: none !important;
+	@include media (">medium") {
+		display: block !important;
+	}
+}
+
+:global .g-mobile-only {
+	display: block !important;
+	@include media (">medium") {
+		display: none !important;
+	}
+}
+
+:global .g-pc-only-f {
+	display: none !important;
+	@include media(">medium") {
+		display: flex !important;
+	}
+}
+
+:global .g-mobile-only-f {
+	display: flex !important;
+	@include media(">medium") {
+		display: none !important;
+	}
+}
+
+:global .g-hidden {
+	display: none !important;
+}
+
+:global .g-aos-ie10-animate {
+	@media screen\0 {
+    opacity: 1 !important;
+    transform: translateZ(0) !important;
+  }
+}
+
+:global .g-input-box {
+	margin-bottom: 3.5rem;
+
+	@include media('>medium'){
+		margin-bottom: 5rem;
+	}
+}
+
+:global .g-feedback {
+	@include font($danger, 1.2rem, $medium);
+    line-height: 1.9rem;
+    letter-spacing: -0.5px;
+}
+
+:global .g-content-padding-top {
+	padding-top: 1.8rem !important;
+
+	@include media('>medium') {
+		padding-top: 0 !important;
+	}
+}
+
+:global .g-pc-100-white-bg {
+	@include media('>medium') {
+		background: $white;
+		height: 100%;
+		padding: 3rem 1.4rem !important;
+	}
+}

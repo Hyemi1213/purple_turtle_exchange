@@ -1,0 +1,94 @@
+@import 'utils';
+
+.common-text-style1 {
+    line-height: 1.9rem;
+    letter-spacing: -0.5px;
+
+    @include media('>medium') {
+        line-height: 2.3rem;
+        letter-spacing: -0.4px;
+    }
+}
+
+.wrapper {
+
+    @include media('>medium') {
+        margin-top: 3.4rem;
+    }
+    
+    .main-title {
+        @include font($greyDarker, 1.4rem, $bold);
+        line-height: 2.3rem;
+        letter-spacing: -0.4px;
+    }
+
+    .semi-title {
+        @include font($greyDarker, 1.2rem, $medium);
+        @extend .common-text-style1;
+        margin: 1.2rem 0 2.5rem;
+    }
+    .selectbar {
+        margin: 3.6rem 0 2rem;
+    }
+    .checkbox-box {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .checkbox-label {
+            @include font($greyDark, 1.2rem, $medium);
+            @extend .common-text-style1;
+        }
+        .indicate-rules {
+            @include font($greyDark, 1.2rem, $bold);
+            @extend .common-text-style1;
+            position: relative;
+            cursor: pointer;
+
+            &:after {
+                content: '';
+                @include horizontal-align;
+                bottom: 0;
+                background: $greyDark;
+                height: 0.1rem;
+                width: 100%;
+            }
+        }
+    }
+    .btn-box {
+        margin-top: 1.8rem;
+        text-align: right;
+
+        .btn {
+            min-width: 6.7rem;
+
+            &~ .btn {
+                margin-left: 1rem;
+            }
+        }
+    }
+
+    @include media('>medium') {
+        .semi-title {
+            font-weight: $medium;
+            margin: 0;
+            margin-top: 0.8rem;
+        }
+
+        .selectbar {
+            margin-bottom: 1.8rem;
+        }
+
+        .checkbox-box {
+            .checkbox-label {
+                font-size: 1.4rem;
+            }
+            .indicate-rules {
+                font-size: 1.4rem;
+            }
+        }
+        .btn-box {
+            margin-top: 4rem;
+            text-align: center;
+        }
+    }
+}

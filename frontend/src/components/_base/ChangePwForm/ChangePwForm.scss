@@ -1,0 +1,35 @@
+@import 'utils';
+
+.wrapper {
+    @include media('>medium') {
+        margin-top: 3.4rem;
+    }
+}
+
+.pc-title {
+    @include media('>medium') {
+        margin-bottom: 3.4rem;
+    }
+}
+
+.btn-box {
+    text-align: center;
+    margin-top: 10.5rem;
+
+    @include media('>medium') {
+        margin-top: 7.5rem;
+    }
+}
+
+.back-box {
+    @include media('>medium') {
+        text-align: center;
+        margin-top: 3.6rem;
+        position: relative;
+
+        .link {
+            @include center-align;
+            z-index: 1;
+        }
+    }
+}

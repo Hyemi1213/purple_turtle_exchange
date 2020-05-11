@@ -1,0 +1,39 @@
+@import 'src/components/_base/PCListTable/PCListTable.scss';
+@import 'src/components/_base/TradeMainMyTradeTablePCForm/TradeMainMyTradeTablePCForm.scss';
+@import 'utils';
+
+.wrapper {
+    @include media('>medium') {
+        border-radius: 8px !important;
+        min-height: 40.6rem;
+        .deal-box {
+            .head-box {
+                padding: 0.6rem 0;
+            }
+            .head-each {
+                text-transform: uppercase;
+            }
+            .head-each, .body-each {
+                width: 100%;
+
+                &:nth-child(1) {
+                    max-width: 5rem;
+                        
+                    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+                        max-width: 18rem;
+                    }
+
+                }
+
+                &:nth-child(2), &:nth-child(3) {
+                    min-width: 7rem;
+                }
+            }
+        }
+
+        .scroll-box {
+            height: 32.6rem;
+            margin-right: -0.6rem;
+        }
+    }
+}

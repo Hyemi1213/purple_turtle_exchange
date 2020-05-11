@@ -1,0 +1,58 @@
+@import 'utils';
+
+.total-wrapper {
+    @include media('>medium') {
+        margin-top: 3.4rem;
+    }
+}
+
+.wrapper {
+    text-align: center;
+    margin-top: 3.6rem;
+}
+
+.main-title-box {
+    position: relative;
+    text-align: center;
+    display: inline-block;
+    p {
+        @include font($greyDarker, 1.4rem, $bold);
+        line-height: 2.3rem;
+        letter-spacing: -0.4px;
+        @include center-align;
+    }
+}
+
+.content-box {
+    text-align: center;
+    p {
+        @include font($greyDark, 1.2rem, $medium);
+        line-height: 1.9rem;
+        letter-spacing: -0.5px;
+
+        &.not-to-delete {
+            margin-top: 6rem;
+        }
+        &.success {
+            margin-top: 3.8rem;
+        }
+        .strong {
+            font-weight: $bold;
+            color: $greyDark;
+            text-decoration: underline;
+        }
+    }
+}
+
+.btn-box {
+    text-align: center;
+    margin-top: 3.8rem;
+
+    a {
+        padding: .8rem 2.3rem;
+    }
+
+    .submit-btn {
+        margin-left: 2.2rem;
+    }
+}

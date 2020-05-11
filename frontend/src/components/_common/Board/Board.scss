@@ -1,0 +1,23 @@
+@import 'utils';
+
+.table {
+    thead {
+        th {
+            border-bottom: 2px solid $primaryLighter;
+        }
+    }
+    tbody {
+        tr {
+            cursor: pointer;
+            &:hover {
+                background: $primaryLighter;
+                transition: background-color .2s ease-in;
+            }
+        }
+    }
+    th, td {
+        @include font($greyDarkest, 1.6rem, $medium);
+    }
+    
+}
+

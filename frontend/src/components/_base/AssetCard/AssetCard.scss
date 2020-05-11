@@ -1,0 +1,102 @@
+@import 'utils';
+
+.wrapper {
+    padding: 1.5rem 1.2rem !important;
+
+    &.clickable {
+        cursor: pointer;
+    }
+    .main-info-box {
+        // margin-bottom: 0.9rem;
+
+        .main-info {
+            display: flex;
+            align-items: center;
+
+            .img {
+                max-width: 1.8rem;
+            }
+            
+            .title {
+                @include font($greyDarker, 1.4rem, $bold);
+                line-height: 2.3rem;
+                letter-spacing: -0.4px;
+                margin: 0 1rem 0 0.8rem;
+            }
+
+            .semi-title {
+                font-family: 'Montserrat', sans-serif;
+                @include font($greyDark, 1rem, $medium);
+                line-height: 1.8rem;
+                letter-spacing: -0.3px;
+                text-transform: uppercase;
+            }
+        }
+    }
+    .content-box {
+        padding : 0.4rem 0;
+
+        &:first-child {
+            padding-top: 0;
+        }
+
+        &:last-child {
+            padding-bottom: 0;
+        }
+
+        &.line {
+            border-bottom: 1px solid $greyLighter;
+
+            &:last-child {
+                border-bottom: none;
+            }
+        }
+
+        .title {
+            @include font($greyDark, 1.2rem, $bold);
+            line-height: 1.9rem;
+            letter-spacing: -0.5px;
+            display: flex;
+            align-items: center;
+        }
+
+        .content, .semi-content {
+            text-align: right;
+            font-family: 'Montserrat', sans-serif;
+            @include font($greyDark, 1.3rem, $medium);
+            line-height: 1.8rem;
+            letter-spacing: -0.3px;
+        }
+        .semi-content {
+            font-size: 1rem;
+            text-transform: uppercase;
+            margin-left: 0.2rem;
+        }
+
+        .dot-icon {
+            display: block;
+            width: 0.6rem;
+            height: 0.6rem;
+            border-radius: 100px;
+            margin-right: 0.4rem;
+        }
+
+        &:nth-child(1) {
+            .dot-icon {
+                background: $danger;
+            }
+        }
+
+        &:nth-child(2) {
+            .dot-icon {
+                background: $success;
+            }
+        }
+
+        &:nth-child(3) {
+            .dot-icon {
+                background: $warning;
+            }
+        }
+    }
+}

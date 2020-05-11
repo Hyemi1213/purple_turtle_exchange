@@ -1,0 +1,156 @@
+@import 'utils';
+@import 'src/components/_base/DefaultTable/DefaultTable.scss';
+
+.wrapper {
+
+    .tabs {
+        margin-bottom: 4rem;
+        box-shadow: none ;
+        background: none ;
+
+        .tab-menu {
+            width: auto ;
+            text-transform: uppercase;
+            min-width: unset;
+            width: 100%;
+            margin-right: 0.6rem;
+        }
+    }
+
+    .table {
+        .head-each, .body-each {
+            width: 28%;
+
+            &:nth-child(3) {
+                width: 16%;
+            }
+        }
+
+        .head-each {
+            cursor: pointer;
+            font-size: 1.2rem;
+        }
+
+        .body-each {
+            word-break: break-all;
+
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+
+            font-weight: $bold;
+
+            &.pair {
+                text-transform: uppercase;
+            }
+            
+            &.plus {
+                color: $success;
+            }
+
+            &.minus {
+                color: $danger;
+            }
+
+            .extra {
+                font-family: 'Montserrat', sans-serif;
+                @include font($greyLight, 1rem, $medium);
+                line-height: 1.8rem;
+                letter-spacing: -0.3px;
+                display: block;
+            }
+        }
+    }
+
+    .more-btn-box {
+        text-align: center;
+        margin-top: 2.4rem;
+        .btn {
+            background: $white;
+            border: 1px solid $greyLighter;
+            box-shadow: 2px 4px 9px rgba(18, 18, 35, 0.12);
+            border-radius: 4px;
+            @include font($greyDarker, 1rem, $bold);
+            line-height: 1.4rem;
+            letter-spacing: -0.4px;
+            padding: 0.9rem 0;
+            max-width: 18.6rem;
+            margin: 0 auto;
+            cursor: pointer;
+        }
+    }
+
+    @include media('>medium') {
+        .tabs {
+            margin-bottom: 1.6rem;
+
+            .tab-menu {
+                min-width: 8rem;
+                margin-right: 1rem;
+                width: unset;
+            }
+        }
+
+        .table {
+
+            .head-box {
+                padding: 1rem 0;
+
+                .head-each {
+                    @include font($greyDarker, 1.4rem, $bold);
+                    line-height: 2.3rem;
+                    letter-spacing: -0.4px;
+                }
+            }
+
+            .table-body {
+                margin-top: 1rem;
+                box-shadow: 2px 4px 9px rgba(18, 18, 35, 0.12);
+                border: 1px solid $greyLightest;
+            }
+
+            .body-box-wrapper {
+                padding: 0.6rem;
+                border-top: 1px solid $greyLightest;
+                .body-box {
+                    cursor: pointer;
+                    border-bottom: none;
+                    border-radius: 24px;
+                    transition: background-color .2s ease-in;
+
+                    &:hover {
+                        background: $greyLightest;
+                    }
+                }
+            }
+
+            ////////////////
+
+            // .head-each, .body-each {
+            //     width: 28%;
+
+            //     &:nth-child(3) {
+            //         width: 16%;
+            //     }
+            // }
+
+            .body-each {
+                @include font($greyDarker, 1.4rem, $medium);
+                line-height: 2rem;
+                letter-spacing: -0.2px;
+
+                &.pair {
+                    font-weight: $bold;
+                }
+            }
+        }
+
+        .more-btn-box {
+            margin-top: 4rem;
+            .btn {
+                font-size: 1.4rem;
+                padding: 1.4rem 0;
+            }
+        }
+    }
+}

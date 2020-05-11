@@ -1,0 +1,182 @@
+@import 'utils';
+
+.wrapper {
+    margin-top: 3.8rem;
+
+    @include media('>medium') {
+        margin-top: 0;
+    }
+}
+
+.info-box {
+    margin: 0 0 1.8rem;
+
+    .content-box {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 0.6rem;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        .title {
+            @include font($greyDark, 1.2rem, $medium);
+            letter-spacing: -0.5px;
+            line-height: 1.9rem;
+
+            .percentage {
+                display: none !important;
+            }
+        }
+
+        .content {
+            font-family: 'Montserrat', sans-serif;
+            @include font($greyDark, 1.3rem, $medium);
+            letter-spacing: -0.3px;
+            line-height: 1.8rem;
+            @include flexMC;
+            text-transform: uppercase;
+            padding-right: 3.6rem;
+            position: relative;
+
+            .percentage {
+                display: flex !important;
+                @include flexMC;
+                font-size: 1rem;
+                font-weight: $medium;
+                color: $success;
+                @include vertical-align;
+                right: -0.1rem;
+
+                .sort-arrow {
+                    margin-left: 0.2rem;
+                }
+                path {
+                    fill: $success;
+                }
+
+                &.danger {
+                    color: $danger;
+                    path {
+                        fill: $danger;
+                    }
+                }
+            }
+
+            &.bold {
+                font-weight: $bold;
+                color: $greyDarker;
+            }
+        }
+    }
+
+    @include media('>medium') {
+        margin: 0 0 0.8rem;
+        display: flex;
+        height: 6.4rem;
+        border-radius: 6px !important;
+
+        .content-box {
+            margin-bottom: 0;
+            flex-direction: column;
+            width: 100%;
+            align-items: flex-start;
+
+            .title {
+                @include font($greyDarker, 1.2rem, $bold);
+                @include flexMC;
+
+                .percentage {
+                    font-family: 'Montserrat', sans-serif;
+                    display: flex !important;
+                    align-items: center;
+                    font-size: 1rem;
+                    font-weight: $medium;
+                    color: $success;
+                    margin-left: 0.2rem;
+
+                    path {
+                        fill: $success;
+                    }
+
+                    &.danger {
+                        color: $danger;
+                        path {
+                            fill: $danger;
+                        }
+                    }
+                }
+            }
+
+            .content {
+                margin-top: 0.3rem;
+                padding-right: 1.6rem;
+
+                @include media(">huge") {
+                    padding-right: 3.6rem;
+                }
+
+                .percentage {
+                    display: none !important;
+                }
+
+                &.bold {
+                    font-weight: $medium;
+                    color: $greyDark;
+                }
+            }
+        }
+    }
+}
+
+.chart-box {
+    text-align: center;
+
+    .chart-title {
+        font-family: 'Montserrat', sans-serif;
+        @include font($greyDark, 1rem, $bold);
+        letter-spacing: -0.3px;
+        line-height: 1.8rem;
+        text-transform: uppercase;    
+    }
+
+    .chart-img {
+        margin: 0.8rem 0 1.7rem;
+    }
+
+    .instruction {
+        @include font($greyDark, 1.2rem, $medium);
+        line-height: 1.9rem;
+        letter-spacing: -0.5px;
+    }
+
+    .btn {
+        padding: 0.8rem 2.3rem;
+    }
+
+    @include media('>medium') {
+
+        border-radius: 6px !important;
+        height: 40rem;
+        margin-bottom: 0.6rem;
+        padding: 0.6rem !important;
+
+        .click-to-watch-bigger-wrapper {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .click-to-watch-bigger {
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            @include font($greyDarker, 1rem, $bold);
+
+            img {
+                margin-right: 0.6rem;
+            }
+        }
+    }
+}

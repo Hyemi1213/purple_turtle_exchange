@@ -1,0 +1,143 @@
+@import 'src/components/_base/PCListTable/PCListTable.scss';
+@import 'utils';
+
+.wrapper {
+    @include media('>medium') {
+        border-radius: 8px !important;
+        height: 40.6rem;
+
+        .login-needed {
+            border-color: transparent;
+            padding: 8rem 0;
+        }
+
+        .body-cuxtom-box {
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+        .body-each {
+            text-transform: uppercase;
+            padding: 0 0.5rem;
+            @include flexMC;
+
+            .icon {
+                background: $success;
+                width: 1.4rem;
+                height: 1.4rem;
+                border-radius: 100px;
+                @include flexMC;
+                margin-right: 0.4rem;
+
+                &:after {
+                    content: '';
+                    background-image: url(/src/static/images/buy_icon.svg);
+                    background-repeat: no-repeat;
+                    width: 100%;
+                    height: 100%;
+                    background-position: center;
+                }
+            }
+
+            &.status {
+                font-family: 'Noto Sans KR', sans-serif;
+                font-size: 1.2rem;
+                line-height: 1.9rem;
+                letter-spacing: -0.5px;
+            }
+
+            &.sell {
+                color: $danger;
+
+                .icon {
+                    background: $danger;
+                    &:after {
+                        background-image: url(/src/static/images/sell_icon.svg);
+                    }
+                }
+            }
+
+            &.buy {
+                color: $success;
+            }
+
+            &.cancel {
+                color: $danger;
+            }
+
+            
+        }
+
+        .finished {
+            .head-each, .body-each {
+                width: 100%;
+                
+                
+                &:nth-child(1) {
+                    max-width: 8rem;
+
+                    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+                        max-width: 18rem;
+                    }
+                }
+
+                &:nth-child(2) {
+                    max-width: 8rem;
+                }
+
+                &:nth-child(3), &:nth-child(4){
+                    min-width: 10rem;
+                }
+            }
+        }
+
+        .unfinished {
+            .head-each, .body-each {
+                width: 100%;
+                &:nth-child(1) {
+                    max-width: 5rem;
+                    
+                }
+
+                &:nth-child(2) {
+                    max-width: 7rem;
+                    
+                }
+
+                &:nth-child(3), &:nth-child(4), &:nth-child(5) {
+                    min-width: 10rem;
+                }
+
+                &:last-child {
+                    max-width: 4rem;
+                    cursor: pointer;
+                }
+
+                @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+                    &:nth-child(1) {
+                        max-width: 25rem;
+                        
+                    }
+
+                    &:nth-child(2) {
+                        max-width: 29rem;
+                        
+                    }
+
+                    &:nth-child(3), &:nth-child(4), &:nth-child(5) {
+                        min-width: auto;
+                    }
+
+                    &:last-child {
+                        max-width: 19rem;
+                    }
+                }
+            }
+        }
+
+        .scroll-box {
+            height: 31.2rem;
+            margin-right: -0.6rem;
+        }
+    }
+}

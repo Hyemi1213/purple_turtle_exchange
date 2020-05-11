@@ -1,0 +1,19 @@
+@import 'utils';
+
+.info-box {
+    li {
+        color: $info !important;
+        font-size: 1rem !important;
+        font-weight: $medium !important;
+        line-height: 1.4rem !important;
+        letter-spacing: -0.5px !important;
+        position: relative;
+        padding-left: 1rem;
+
+        &:before {
+            content: '·';
+            position: absolute;
+            left: 0;
+        }
+    }
+}

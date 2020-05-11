@@ -1,0 +1,73 @@
+@import 'utils';
+
+.common-text-style {
+    line-height: 1.9rem;
+    letter-spacing: -0.5px;
+}
+
+.total-wrapper {
+    @include media('>medium') {
+        margin-top: 3.4rem;
+    }
+}
+
+.pc-title {
+    @include media('>medium') {
+        margin-bottom: 2.4rem;
+    }
+}
+
+.wrapper {
+    margin-bottom: 1.9rem;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+    .title-box {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 1.4rem;
+        .title {
+            display: flex;
+            align-items: center;
+            p {
+                @include font($greyDarker, 1.2rem, $bold);
+                @extend .common-text-style;
+                margin-left: 0.5rem;
+            }
+        }
+    }
+
+    .content {
+        @include font($greyDark, 1.2rem, $medium);
+        @extend .common-text-style;
+
+        .strong {
+            color: $info;
+            font-weight: $bold;
+            padding-right: 0.6rem;
+        }
+    }
+
+    .info {
+        @extend .content;
+        margin-top: 0.6rem;
+    }
+
+    .small-info {
+        @include font($greyDark, 1rem, $medium);
+        line-height: 1.4rem;
+        letter-spacing: -0.5px;
+        margin-top: 0.4rem;
+    }
+
+    .btn-box {
+        text-align: center;
+        margin-top: 1.6rem;
+    }
+}
+
+.back-box {
+    margin-top: 3.6rem;
+    text-align: center;
+}

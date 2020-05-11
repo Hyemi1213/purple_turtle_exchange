@@ -1,0 +1,79 @@
+@import 'utils';
+
+.wrapper {
+    display: inline-flex;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+    height: auto;
+    @include font($greyDark, 1.2rem, $medium);
+    line-height: 2rem;
+    letter-spacing: -0.2px;
+    cursor: pointer;
+    transition-property: color, border-color;
+    transition-duration: .15s;
+    transition-timing-function: ease-in;
+
+    &:hover {
+        color: $primary;
+        .checkmark {
+            // border-color: $primary;
+        }
+    }
+
+    input[type="checkbox"] {
+        position: absolute;
+        width: 1px; 
+        height: 1px; 
+        padding: 0; 
+        margin: -1px; 
+        overflow: hidden; 
+        clip:rect(0,0,0,0); 
+        border: 0;
+    }
+    .checkmark {
+        width: 1.2rem;
+        height: 1.2rem;
+        border: 1px solid $greyLight;
+        position: relative;
+        margin-right: 0.6rem;
+
+        &.invalid {
+            // border-color: $danger;
+
+            &~ span {
+                // color: $danger;
+                font-weight: $bold;
+            }
+        }
+    }
+
+    input:checked {
+        &~ .checkmark {
+            border-color: $primary;
+            @include flexMC;
+
+            .check-icon {
+                background-image: url(/src/components/_common/CheckBox/check_icon.svg);
+                background-position: center;
+                background-repeat: no-repeat;
+                width: 80%;
+                height: 80%;
+
+                // border: solid $primary;
+                // border-width: 0 0.1rem 0.1rem 0;
+                // display: inline-block;
+                // padding: 0.2rem;
+                // transform: rotate(45deg);
+                // position: relative;
+                // top: -0.1rem;
+            }
+        }
+    }
+
+    .focus {
+        @include font($greyBlack, 1.4rem, $bold);
+        line-height: 2.6rem;
+        margin-left: 1.2rem;
+    }
+}

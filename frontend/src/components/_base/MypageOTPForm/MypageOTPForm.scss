@@ -1,0 +1,257 @@
+@import 'utils';
+
+.wrapper {
+    @include media('>medium') {
+        margin-top: 3.4rem;
+    }
+}
+
+.common-box {
+
+    .title-box {
+        margin-top: 3rem;
+        .title {
+            @include font($greyDarker, 1.4rem, $bold);
+            line-height: 2.3rem;
+            letter-spacing: -0.4px;
+        }
+    }
+
+    .info-text {
+        @include font($greyDark, 1.2rem, $medium);
+        line-height: 1.9rem;
+        letter-spacing: -0.5px;
+
+        @include media('>medium') {
+            font-size: 1.4rem;
+            line-height: 2.3rem;
+            letter-spacing: -0.4px;
+
+            &.extra-text {
+                font-size: 1.2rem;
+            }
+
+        }
+        
+    }
+
+    .btn-box {
+        text-align: center;
+    }
+}
+
+.deactive-box {
+    .info-text {
+        margin: 2.4rem 0;
+    }
+
+    .btn-box {
+        margin-top: 5.8rem;
+        
+        .btn ~ .btn {
+            margin-left: 1.6rem;
+        }
+    }
+
+    @include media('>medium') {
+        .btn-box {
+            
+            .btn ~ .btn {
+                margin-left: 3.2rem;
+            }
+        }
+    }
+}
+
+.otp-process-box {
+    text-align: center;
+
+    .title-box {
+        margin-bottom: 2rem;
+    }
+
+    .order {
+        @include font($primary, 1.4rem, $bold);
+        line-height: 2.3rem;
+        letter-spacing: -0.4px;
+        margin-bottom: 1.5rem;
+    }
+
+    .info-text {
+        margin-bottom: 1.3rem;
+    }
+
+    .input {
+        max-width: 21.3rem;
+        margin: 0 auto;
+    }
+
+    .section1 {
+        margin-bottom: 6.3rem;
+    }
+    
+    .section2 {
+
+        .feedback-msg {
+            text-align: left;
+            max-width: 21.3rem;
+            margin: 0 auto;
+        }
+
+        .btn-box {
+            margin-top: 5.8rem;
+            
+            .btn ~ .btn {
+                margin-left: 1.6rem;
+            }
+        }
+    }
+
+    @include media('>medium') {
+        text-align: left;
+
+        .box-title {
+            margin-bottom: 3rem;
+        }
+
+        .order {
+            display: inline-block;
+            margin-right: 1.4rem;
+            margin-bottom: 3rem;
+        }
+
+        .order-text {
+            display: inline-block !important;
+        }
+
+        .code-box {
+            @include flexMC;
+
+            .qrcode {
+                width: 9.4rem;
+                height: 9.4rem;
+                margin-right: 3.2rem;
+                margin-left: 4.7rem;
+            }
+
+            .key-box {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: center;
+
+                input {
+                    height: 3.2rem;
+                }
+
+                .input-extra-box {
+                    height: 3.2rem;
+                    font-size: 1.2rem;
+                }
+
+                .info-text {
+                    margin-top: 2rem;  
+                    margin-bottom: 0; 
+                }   
+            }
+        }
+
+        .input {
+            margin: 0;
+        }
+
+        .section1 {
+            margin-bottom: 5rem;
+        }
+        
+        .section2 {
+
+            input {
+                max-width: unset;
+            }
+
+            .feedback-msg {
+                text-align: left;
+                max-width: unset;
+                margin: 0;
+            }
+
+            .btn-box {
+                
+                .btn ~ .btn {
+                    margin-left: 3.2rem;
+                }
+            }
+        }
+    }
+}
+
+.default-box {
+    margin-top: 3rem;
+    .main-box {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 2rem;
+        .title-box {
+            margin-top: 0;
+            display: flex;
+            align-items: center;
+
+            .title {
+                margin-left: 1.2rem;
+            }
+        }
+    }
+
+    .store-box {
+        margin-top: 3.8rem;
+        text-align: center;
+
+        img {
+            &~img {
+                margin-left: 2.7rem;
+            }
+        }
+    }
+
+    .btn-box {
+        margin-top: 3.6rem;
+    }
+
+    @include media('>medium') {
+        margin-top: 2.4rem ;
+
+        .main-box {
+            position: relative;
+            justify-content: flex-start;
+
+            .title-box {
+                margin-left: 9.4rem;
+
+                .title {
+                    margin-left: 0;
+                }
+
+                img {
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 5.9rem;
+                    height: 5.9rem;
+                }
+            }
+
+            .badge {
+                margin-left: 2.6rem;
+                width: 8.3rem;
+            }
+        }
+
+        .info-box {
+            margin-left: 10.2rem;
+
+        }
+    }
+    
+}

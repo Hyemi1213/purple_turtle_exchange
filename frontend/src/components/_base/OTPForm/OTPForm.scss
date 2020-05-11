@@ -1,0 +1,18 @@
+@import 'utils';
+
+.wrapper {
+    margin-top: 7rem;
+
+    .btn-box {
+        text-align: center;
+        margin-top: 12.3rem;
+    }
+
+    @include media('>medium') {
+        margin-top: 9.3rem;
+
+        .btn-box {
+            margin-top: 8rem;
+        }
+    }
+}

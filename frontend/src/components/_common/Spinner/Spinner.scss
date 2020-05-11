@@ -1,0 +1,41 @@
+@import 'utils';
+
+//spinner 기본 width/height
+$width: 4.6rem;
+$height: 4.6rem;
+
+.lds-dual-ring {
+  	display: inline-block;
+  	width: $width;
+	  height: $height;
+	  @include center-align;
+
+  	&:after {
+		content: " ";
+		display: block;
+		width: inherit;
+		height: inherit;
+		margin: 1px;
+		border-radius: 50%;
+
+		border: var(--pseudo-border-size) solid var(--pseudo-colour);
+		border-color: var(--pseudo-colour) transparent var(--pseudo-colour) transparent;
+		animation: lds-dual-ring 1.2s linear infinite;
+	}
+
+	@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+		width: 0 !important;
+		height: 0 !important;
+	}
+
+}
+
+
+@keyframes lds-dual-ring {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}

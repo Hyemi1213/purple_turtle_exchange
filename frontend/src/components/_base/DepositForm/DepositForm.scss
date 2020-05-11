@@ -1,0 +1,45 @@
+@import 'utils';
+
+.wrapper {
+    @include media('>medium') {
+        // padding: 0 1.4rem;
+    }
+}
+
+.yes-wallet-box {
+    margin-top: 5.2rem;
+
+    .qr-box {
+        text-align: center;
+        margin-bottom: 1.8rem;
+    }
+
+    .small-info{
+        @include font($info, 1rem, $regular);
+        line-height: 1.4rem;
+        letter-spacing: -0.5px;
+        margin-top: 0.8rem;
+    }
+
+    .info-box{
+        margin-top: 2.7rem;
+    }
+}
+
+.no-wallet-box {
+    text-align: center;
+    margin-top: 4.6rem;
+
+    .info-msg {
+        @include font($greyDarker, 1.2rem, $medium);
+        line-height: 1.9rem;
+        letter-spacing: -0.5px;
+        margin: 2.9rem 0 1.8rem;
+    }
+}
+
+.krw-btn {
+    a {
+		padding: 0.8rem 2.3rem;
+    }
+}
