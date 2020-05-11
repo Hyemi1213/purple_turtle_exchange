@@ -4,10 +4,10 @@ import classNames from 'classnames/bind';
 
 const cx = classNames.bind(styles);
 
-const Spinner = ({ size, colour, borderSize, className, ...rest}) => {
+const Spinner = ({ size, colour, borderSize, className, isCenterAlign, ...rest}) => {
   return (
 	 	<div
-			className={cx('lds-dual-ring', className)}
+			className={cx('lds-dual-ring', className, isCenterAlign && 'center-align')}
 		  	style={{ width: size, height: size, '--pseudo-colour': colour, '--pseudo-border-size': `${borderSize}px`}}
 			{...rest}
 		>

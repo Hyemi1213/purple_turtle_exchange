@@ -16,6 +16,10 @@
             .img {
                 max-width: 1.8rem;
             }
+
+            .symbol-img {
+                width: 2rem;
+            }
             
             .title {
                 @include font($greyDarker, 1.4rem, $bold);

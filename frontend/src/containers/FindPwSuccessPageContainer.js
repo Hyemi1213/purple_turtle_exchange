@@ -6,7 +6,7 @@ import FindPwSuccessForm from 'components/_base/FindPwSuccessForm';
 class FindPwSuccessPageContainer extends Component {
 
     state = {
-        code: 'asdf'
+        code: 'code'
     }
 
     // 복사된 후 callback

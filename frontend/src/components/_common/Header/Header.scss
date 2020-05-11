@@ -109,9 +109,9 @@
 		}
 
 		.main-logo {
-			width: 9.2rem;
 			height: $headerPc;
-			padding: 1.8rem 1.5rem;
+			display: flex;
+			align-items: center;
 
 			img {
 				width: 9.2rem;

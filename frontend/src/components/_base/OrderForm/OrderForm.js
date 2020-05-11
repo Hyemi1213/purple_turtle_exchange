@@ -87,7 +87,6 @@ const OrderForm = ({ isBuying, isModalOpen, modalToggle, onModalClose, clickToOr
                                             value={price}
                                             onChange={handleChange}
                                             invalid={formErrors.price.length > 0}
-                                            feedbackMsg={formErrors.price}
                                             placeholder='가격'
                                             extraText={quoteCurrency}
                                             extraTextNoBg
@@ -101,7 +100,6 @@ const OrderForm = ({ isBuying, isModalOpen, modalToggle, onModalClose, clickToOr
                                             value={amount}
                                             onChange={handleChange}
                                             invalid={formErrors.amount.length > 0}
-                                            feedbackMsg={formErrors.amount}
                                             placeholder='수량'
                                             extraText={baseCurrency}
                                             extraTextNoBg

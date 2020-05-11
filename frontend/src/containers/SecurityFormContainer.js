@@ -12,7 +12,7 @@ class SecurityFormContainer extends Component {
 
     state = {
         emailAuth: {
-            content: 'asdf@mail.com'
+            content: 'test@mail.com'
         },
         phoneAuth: {
             isAuth: false,

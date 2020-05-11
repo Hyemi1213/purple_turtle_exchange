@@ -11,6 +11,15 @@ const cx = classNames.bind(styles);
 
 class BeforeLoginTemplate extends Component {
 
+    componentDidMount() {
+        document.body.style.backgroundImage = "linear-gradient(180deg, rgba(255, 255, 255, .9) 40%, rgba(233, 196, 255, .4) 100%)";
+    }
+
+    componentWillUnmount() {
+        document.body.style.backgroundImage = "none";
+
+    }
+
     render() {
         let { children, title, className, activeIdx, background, isTotalBG, ...rest } = this.props;
         let dots = [0, 1, 2];

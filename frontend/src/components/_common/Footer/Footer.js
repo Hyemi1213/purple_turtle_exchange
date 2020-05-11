@@ -28,9 +28,6 @@ class Footer extends Component {
 					</div>
 
 					<Row className={cx('middle-box')}>
-						<Col xs='12' md='1' className={cx('pl-pr-none')}>
-							<p className={cx('logo')}>로고이미지</p>
-						</Col>
 						<Col xs='12' md='11' className={cx('m-pl-pr-none')}>
 							<p className={cx('extra')}>퍼플터틀주식회사  |  대표 홍길동  |  서울시 서울구 서울대로12(서울빌딩), 345호</p>
 							<p className={cx('extra')}>사업자 등록번호 123-45-67890  |  통신판매업 신고 번호 제 1234-서울서울-1234 호</p>

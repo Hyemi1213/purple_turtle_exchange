@@ -60,11 +60,11 @@ class App extends Component {
 
         return (
             <>
-                {isLoading ? <><Dimmer style={{ zIndex: '101' }} /><Spinner /></> : null}
+                {isLoading ? <><Dimmer style={{ zIndex: '101' }} /><Spinner isCenterAlign /></> : null}
                 {isIE() && !isMobile && <WarningOfIE/>}
                 <BrowserRouter>
                     <>
-                        <Suspense fallback={<Spinner />}>
+                        <Suspense fallback={<Spinner isCenterAlign/>}>
                             <Switch>
                                 <PrivateRoute authed={isAuthed} path='/assets/krw/success' component={isMobile ? AssetKrwSuccessPage: AssetListPage} />
                                 <PrivateRoute authed={isAuthed} path='/assets/krw' component={isMobile ? AssetKrwDetailPage: AssetListPage} />

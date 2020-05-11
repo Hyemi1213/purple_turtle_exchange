@@ -47,9 +47,11 @@ const HomePageForm = ({ quoteCurrencyLists, currentTabMenu, clickedMenu, tableHe
             </DefaultTable>
 
             {hasMore && <div className={cx('more-btn-box')}>
-                <div onClick={clickToGetMoreLists} className={cx('btn')}>
-                    <Link to='/trade'>더보기 +</Link>
-                </div>
+                <Link style={{display: 'block'}} to='/trade'>
+                    <div onClick={clickToGetMoreLists} className={cx('btn')}>
+                        더보기 +
+                    </div>
+                </Link>
             </div>}
         </div>
     )

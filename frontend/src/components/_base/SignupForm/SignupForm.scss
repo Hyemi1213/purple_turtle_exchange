@@ -11,6 +11,7 @@
     //     }
     // }
     .checkbox-box {
+        background: $white;
         border: 1px solid $greyLighter;
         border-radius: 4px;
         margin-top: 7.7rem;
@@ -34,6 +35,7 @@
             }
 
             .see-btn {
+                cursor: pointer;
                 @include font($greyDark, 1.2rem, $bold);
                 line-height: 1.9rem;
                 letter-spacing: -0.5px;

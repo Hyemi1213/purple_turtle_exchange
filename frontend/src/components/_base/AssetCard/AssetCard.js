@@ -7,6 +7,8 @@ import { Row, Col } from 'reactstrap';
 import DefaultCard from 'components/_base/DefaultCard';
 import { Star } from 'components/_common/Icons';
 
+import logoImg from 'static/images/logo.svg';
+
 const cx = classNames.bind(styles);
 
 const AssetCard = ({ className, title, semiTitle, isFavExisted, isFav, isDot, contents, clickToSetFav, clickToDetailPage, isUnderline, isClickable, ...rest }) => {
@@ -15,6 +17,7 @@ const AssetCard = ({ className, title, semiTitle, isFavExisted, isFav, isDot, co
             {title ? 
                 <Row className={cx('main-info-box')}>
                     <Col onClick={clickToDetailPage} className={cx('pl-pr-none', 'main-info')}>
+                        <img className={cx('symbol-img')} src={logoImg} alt={title}/>
                         <p className={cx('title')}>{title}</p><span className={cx('semi-title')}>{semiTitle}</span>
                     </Col>
                     {isFavExisted ?

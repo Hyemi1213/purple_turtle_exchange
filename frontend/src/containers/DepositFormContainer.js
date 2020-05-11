@@ -9,7 +9,7 @@ import qrCodeImg from 'static/images/qrcode_sample.png';
 class DepositFormContainer extends Component {
 
     state = {
-        code: 'asdf',
+        code: '0X1D82648FCA70789B8554A27FDB25C86000A8F37EB4EE701962530DE2B851F683',
         isLoading: false,
         hasWallet: false,
         minimum: 0

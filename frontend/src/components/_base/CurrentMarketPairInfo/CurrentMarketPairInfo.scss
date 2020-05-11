@@ -19,6 +19,10 @@
 .menu-wrapper {
     background: $white;
     border-bottom: 2px solid $greyLighter;
+
+    img {
+        width: 2rem;
+    }
 }
 
 .wrapper {

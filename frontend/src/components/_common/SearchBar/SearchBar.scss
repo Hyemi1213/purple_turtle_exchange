@@ -5,16 +5,16 @@
     position: relative;
 
     .extra-box {
-        height: 3.2rem;
-        line-height: 3.2rem;
+        height: 4rem;
+        line-height: 4rem;
     }
 
     .search-input {
         background: $white;
         display: block;
         padding: 0.6rem 1.2rem;
-        height: 3.2rem;
-        line-height: 3.2rem;
+        height: 4rem;
+        line-height: 4rem;
         border: 1px solid $greyLight;
         border-radius: 4px;
         @include font($greyDark, 1.2rem, $medium);

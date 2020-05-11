@@ -9,7 +9,7 @@ import SignupForm from 'components/_base/SignupForm';
 class SignupPageContainer extends Component {
 
     state = {
-        email: 'ffan0811@gmail.com',
+        email: 'test@gmail.com',
         password: 'Xptmxj1!',
         passwordConf: 'Xptmxj1!',
         terms: false,
@@ -53,16 +53,6 @@ class SignupPageContainer extends Component {
                 type: 'IS_LOADING_OPEN'
             });
 
-            try {
-
-                //회원가입 요청
-                let result = await axiosInstance.post('/users', {
-                    email: email,
-                    password: passwordConf
-                });
-
-                console.log(result);
-
                 this.setState({
                     email: '',
                     password: '',
@@ -77,27 +67,6 @@ class SignupPageContainer extends Component {
 
                 await this.props.history.push(`/signup/confirm`);
 
-            } catch (e) {
-                let error = e.response;
-                console.log(error);
-                if (error.data.code = '0x00000000') {
-                    this.props.dispatch({
-                        type: 'ALERT_OPEN',
-                        alertType: 'danger',
-                        alertMsg: '이미 등록된 이메일입니다.'
-                    });
-                } else {
-                    this.props.dispatch({
-                        type: 'ALERT_OPEN',
-                        alertType: 'danger',
-                        alertMsg: '이미 등록된 이메일입니다.'
-                    });
-                }
-
-                await this.props.dispatch({
-                    type: 'IS_LOADING_CLOSE'
-                });
-            }
         }
     }
 

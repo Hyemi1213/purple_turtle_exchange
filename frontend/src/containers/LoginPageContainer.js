@@ -10,7 +10,7 @@ import axiosInstance from '../middlewares/axiosInstance';
 class LoginPageContainer extends Component {
 
     state = {
-        email: 'ffan0811@naver.com',
+        email: 'test@naver.com',
         password: 'Xptmxj1!',
         formErrors: {
             email: '',
