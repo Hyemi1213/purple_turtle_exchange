@@ -52,11 +52,12 @@ const CryptoDetailForm = ({ infos, clickToOpenChart, baseCurrency }) => {
             </DefaultCard>
 
             <DefaultCard formStyle className={cx('chart-box', 'g-pc-only')}>
-                <div className={cx('click-to-watch-bigger-wrapper')}>
+                {/* <div className={cx('click-to-watch-bigger-wrapper')}>
                     <div className={cx('click-to-watch-bigger')}>
                         <img src={eyeImg} alt='크게보기' /><p onClick={clickToOpenChart}>크게보기</p>
                     </div>
-                </div>
+                </div> */}
+                <div id="chart" className={cx('chart-container')}></div>
             </DefaultCard>
         </div>
     )

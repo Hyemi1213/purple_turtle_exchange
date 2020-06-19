@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[22],{641:function(n,e,t){"use strict";t.r(e);var u=t(0),a=t.n(u),c=function(){return a.a.createElement("div",null,"NoMatchPage")};t.d(e,"default",function(){return c})}}]);
